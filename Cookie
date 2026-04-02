@@ -1,0 +1,3712 @@
+local fenv = getfenv()
+local env = _G
+local UserInputService = game:GetService('UserInputService')
+local Players = game:GetService('Players')
+local RunService = game:GetService('RunService')
+local TweenService = game:GetService('TweenService')
+local CoreGui = game:GetService('CoreGui')
+local Workspace = game:GetService('Workspace')
+local ReplicatedStorage = game:GetService('ReplicatedStorage')
+local Lighting = game:GetService('Lighting')
+local screengui_851 = Instance.new("ScreenGui")
+screengui_851.Name = "KawatanHub_Official"
+screengui_851.Parent = screengui_851
+screengui_851.ResetOnSpawn = false
+local textbutton_524 = Instance.new("TextButton")
+textbutton_524.BackgroundColor3 = Color3.fromRGB(11, 14, 20)
+textbutton_524.TextColor3 = Color3.fromRGB(35, 125, 255)
+textbutton_524.Text = ""
+textbutton_524.Font = "GothamBold"
+textbutton_524.Position = UDim2.new(0.05, 0, 0.2, 0)
+textbutton_524.TextSize = 20
+textbutton_524.Size = UDim2.new(0, 45, 0, 45)
+textbutton_524.Parent = textbutton_524
+local uicorner_229 = Instance.new("UICorner")
+uicorner_229.CornerRadius = UDim.new(0, 8)
+uicorner_229.Parent = uicorner_229
+local uistroke_342 = Instance.new("UIStroke")
+uistroke_342.Thickness = 1.5
+uistroke_342.Color = Color3.fromRGB(35, 125, 255)
+uistroke_342.Parent = uistroke_342
+local frame_856 = Instance.new("Frame")
+frame_856.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+frame_856.Position = UDim2.new(0, 8.5, 0, 10)
+frame_856.BorderSizePixel = 0
+frame_856.Size = UDim2.new(0, 28, 0, 3)
+frame_856.Parent = frame_856
+local uicorner_770 = Instance.new("UICorner")
+uicorner_770.CornerRadius = UDim.new(1, 0)
+uicorner_770.Parent = uicorner_770
+local frame_378 = Instance.new("Frame")
+frame_378.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+frame_378.Position = UDim2.new(0, 11.5, 0, 19)
+frame_378.BorderSizePixel = 0
+frame_378.Size = UDim2.new(0, 22, 0, 3)
+frame_378.Parent = frame_378
+local uicorner_704 = Instance.new("UICorner")
+uicorner_704.CornerRadius = UDim.new(1, 0)
+uicorner_704.Parent = uicorner_704
+local frame_477 = Instance.new("Frame")
+frame_477.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+frame_477.Position = UDim2.new(0, 14.5, 0, 28)
+frame_477.BorderSizePixel = 0
+frame_477.Size = UDim2.new(0, 16, 0, 3)
+frame_477.Parent = frame_477
+local uicorner_663 = Instance.new("UICorner")
+uicorner_663.CornerRadius = UDim.new(1, 0)
+uicorner_663.Parent = uicorner_663
+local frame_623 = Instance.new("Frame")
+frame_623.BackgroundColor3 = Color3.fromRGB(11, 14, 20)
+frame_623.Visible = false
+frame_623.Position = UDim2.new(0.5, -170, 0.5, -190)
+frame_623.BackgroundTransparency = 0.2
+frame_623.Size = UDim2.new(0, 340, 0, 380)
+frame_623.Parent = frame_623
+local uicorner_574 = Instance.new("UICorner")
+uicorner_574.CornerRadius = UDim.new(0, 12)
+uicorner_574.Parent = uicorner_574
+local uistroke_387 = Instance.new("UIStroke")
+uistroke_387.Thickness = 2
+uistroke_387.Color = Color3.fromRGB(35, 125, 255)
+uistroke_387.Parent = uistroke_387
+local frame_7 = Instance.new("Frame")
+frame_7.BackgroundColor3 = Color3.fromRGB(8, 11, 18)
+frame_7.BorderSizePixel = 0
+frame_7.Position = UDim2.new(0.5, -170.0, 0, 22)
+frame_7.BackgroundTransparency = 0.08
+frame_7.Size = UDim2.new(0, 340, 0, 36)
+frame_7.Parent = frame_7
+local uicorner_51 = Instance.new("UICorner")
+uicorner_51.CornerRadius = UDim.new(0, 18)
+uicorner_51.Parent = uicorner_51
+local uistroke_404 = Instance.new("UIStroke")
+uistroke_404.Thickness = 1.5
+uistroke_404.Color = Color3.fromRGB(35, 125, 255)
+uistroke_404.Transparency = 0.35
+uistroke_404.Parent = uistroke_404
+local textlabel_66 = Instance.new("TextLabel")
+textlabel_66.Text = "Kawatan Hub"
+textlabel_66.Position = UDim2.new(0, 12, 0, 0)
+textlabel_66.TextColor3 = Color3.fromRGB(35, 125, 255)
+textlabel_66.TextXAlignment = "Left"
+textlabel_66.BackgroundTransparency = 1
+textlabel_66.Font = "GothamBold"
+textlabel_66.TextSize = 14
+textlabel_66.Size = UDim2.new(0, 118, 1, 0)
+textlabel_66.Parent = textlabel_66
+local frame_90 = Instance.new("Frame")
+frame_90.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+frame_90.BorderSizePixel = 0
+frame_90.Position = UDim2.new(0, 134, 0.225, 0)
+frame_90.BackgroundTransparency = 0.4
+frame_90.Size = UDim2.new(0, 1, 0.55, 0)
+frame_90.Parent = frame_90
+local textlabel_572 = Instance.new("TextLabel")
+textlabel_572.Text = "FPS --"
+textlabel_572.Position = UDim2.new(0, 140, 0, 0)
+textlabel_572.TextColor3 = Color3.fromRGB(220, 220, 220)
+textlabel_572.TextXAlignment = "Center"
+textlabel_572.BackgroundTransparency = 1
+textlabel_572.Font = "GothamBold"
+textlabel_572.TextSize = 14
+textlabel_572.Size = UDim2.new(0, 86, 1, 0)
+textlabel_572.Parent = textlabel_572
+local frame_116 = Instance.new("Frame")
+frame_116.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+frame_116.BorderSizePixel = 0
+frame_116.Position = UDim2.new(0, 230, 0.225, 0)
+frame_116.BackgroundTransparency = 0.4
+frame_116.Size = UDim2.new(0, 1, 0.55, 0)
+frame_116.Parent = frame_116
+local textlabel_194 = Instance.new("TextLabel")
+textlabel_194.Text = "PING --"
+textlabel_194.Position = UDim2.new(0, 234, 0, 0)
+textlabel_194.TextColor3 = Color3.fromRGB(220, 220, 220)
+textlabel_194.TextXAlignment = "Center"
+textlabel_194.BackgroundTransparency = 1
+textlabel_194.Font = "GothamBold"
+textlabel_194.TextSize = 14
+textlabel_194.Size = UDim2.new(0, 100, 1, 0)
+textlabel_194.Parent = textlabel_194
+tick()
+RunService.RenderStepped:Connect(function(s, a, H, b, q, C)
+local calc_1 = (0 + "s")
+local _2 = 0.25 <= calc_1
+end)
+RunService.Heartbeat:Connect(function(s, a, H, b, q, C)
+local calc_1 = (0 + "s")
+local _2 = 1 <= calc_1
+end)
+local frame_186 = Instance.new("Frame")
+frame_186.BackgroundTransparency = 1
+frame_186.Size = UDim2.new(1, 0, 0, 45)
+frame_186.Parent = frame_186
+local textlabel_952 = Instance.new("TextLabel")
+textlabel_952.Text = "Kawatan Hub"
+textlabel_952.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_952.TextColor3 = Color3.fromRGB(35, 125, 255)
+textlabel_952.TextXAlignment = "Left"
+textlabel_952.BackgroundTransparency = 1
+textlabel_952.Font = "GothamBold"
+textlabel_952.TextSize = 18
+textlabel_952.Size = UDim2.new(0.5, 0, 1, 0)
+textlabel_952.Parent = textlabel_952
+local frame_698 = Instance.new("Frame")
+frame_698.BackgroundColor3 = Color3.fromRGB(15, 20, 28)
+frame_698.Position = UDim2.new(0.04, 0, 0.13, 0)
+frame_698.Size = UDim2.new(0.92, 0, 0, 30)
+frame_698.Parent = frame_698
+local uicorner_437 = Instance.new("UICorner")
+uicorner_437.CornerRadius = UDim.new(0, 6)
+uicorner_437.Parent = uicorner_437
+local uilistlayout_443 = Instance.new("UIListLayout")
+uilistlayout_443.FillDirection = "Horizontal"
+uilistlayout_443.HorizontalAlignment = "Center"
+uilistlayout_443.Parent = uilistlayout_443
+local frame_12 = Instance.new("Frame")
+frame_12.BackgroundTransparency = 1
+frame_12.Position = UDim2.new(0, 0, 0.22, 0)
+frame_12.Size = UDim2.new(1, 0, 0.75, 0)
+frame_12.Parent = frame_12
+local scrollingframe_431 = Instance.new("ScrollingFrame")
+scrollingframe_431.BackgroundTransparency = 1
+scrollingframe_431.Visible = false
+scrollingframe_431.ScrollBarThickness = 0
+scrollingframe_431.AutomaticCanvasSize = "Y"
+scrollingframe_431.Size = UDim2.new(1, 0, 1, 0)
+scrollingframe_431.Parent = scrollingframe_431
+local uilistlayout_820 = Instance.new("UIListLayout")
+uilistlayout_820.HorizontalAlignment = "Center"
+uilistlayout_820.Padding = UDim.new(0, 8)
+uilistlayout_820.Parent = uilistlayout_820
+local textbutton_271 = Instance.new("TextButton")
+textbutton_271.BackgroundTransparency = 1
+textbutton_271.TextColor3 = Color3.fromRGB(140, 140, 140)
+textbutton_271.Text = "Combat"
+textbutton_271.Font = "GothamBold"
+textbutton_271.TextSize = 10
+textbutton_271.Size = UDim2.new(0.25, 0, 1, 0)
+textbutton_271.Parent = textbutton_271
+textbutton_271.MouseButton1Click:Connect(function(arg1, arg2)
+scrollingframe_431.Visible = false
+scrollingframe_431.Visible = true
+textbutton_271.TextColor3 = Color3.fromRGB(35, 125, 255)
+end)
+local scrollingframe_810 = Instance.new("ScrollingFrame")
+scrollingframe_810.BackgroundTransparency = 1
+scrollingframe_810.Visible = false
+scrollingframe_810.ScrollBarThickness = 0
+scrollingframe_810.AutomaticCanvasSize = "Y"
+scrollingframe_810.Size = UDim2.new(1, 0, 1, 0)
+scrollingframe_810.Parent = scrollingframe_810
+local uilistlayout_671 = Instance.new("UIListLayout")
+uilistlayout_671.HorizontalAlignment = "Center"
+uilistlayout_671.Padding = UDim.new(0, 8)
+uilistlayout_671.Parent = uilistlayout_671
+local textbutton_794 = Instance.new("TextButton")
+textbutton_794.BackgroundTransparency = 1
+textbutton_794.TextColor3 = Color3.fromRGB(140, 140, 140)
+textbutton_794.Text = "Protect"
+textbutton_794.Font = "GothamBold"
+textbutton_794.TextSize = 10
+textbutton_794.Size = UDim2.new(0.25, 0, 1, 0)
+textbutton_794.Parent = textbutton_794
+textbutton_794.MouseButton1Click:Connect(function(arg1, arg2)
+scrollingframe_431.Visible = false
+scrollingframe_810.Visible = false
+textbutton_271.TextColor3 = Color3.fromRGB(140, 140, 140)
+scrollingframe_810.Visible = true
+textbutton_794.TextColor3 = Color3.fromRGB(35, 125, 255)
+end)
+local scrollingframe_40 = Instance.new("ScrollingFrame")
+scrollingframe_40.BackgroundTransparency = 1
+scrollingframe_40.Visible = false
+scrollingframe_40.ScrollBarThickness = 0
+scrollingframe_40.AutomaticCanvasSize = "Y"
+scrollingframe_40.Size = UDim2.new(1, 0, 1, 0)
+scrollingframe_40.Parent = scrollingframe_40
+local uilistlayout_13 = Instance.new("UIListLayout")
+uilistlayout_13.HorizontalAlignment = "Center"
+uilistlayout_13.Padding = UDim.new(0, 8)
+uilistlayout_13.Parent = uilistlayout_13
+local textbutton_650 = Instance.new("TextButton")
+textbutton_650.BackgroundTransparency = 1
+textbutton_650.TextColor3 = Color3.fromRGB(140, 140, 140)
+textbutton_650.Text = "Visual"
+textbutton_650.Font = "GothamBold"
+textbutton_650.TextSize = 10
+textbutton_650.Size = UDim2.new(0.25, 0, 1, 0)
+textbutton_650.Parent = textbutton_650
+textbutton_650.MouseButton1Click:Connect(function(arg1, arg2)
+scrollingframe_40.Visible = false
+scrollingframe_810.Visible = false
+scrollingframe_431.Visible = false
+textbutton_271.TextColor3 = Color3.fromRGB(140, 140, 140)
+textbutton_794.TextColor3 = Color3.fromRGB(140, 140, 140)
+scrollingframe_40.Visible = true
+textbutton_650.TextColor3 = Color3.fromRGB(35, 125, 255)
+end)
+local scrollingframe_809 = Instance.new("ScrollingFrame")
+scrollingframe_809.BackgroundTransparency = 1
+scrollingframe_809.Visible = false
+scrollingframe_809.ScrollBarThickness = 0
+scrollingframe_809.AutomaticCanvasSize = "Y"
+scrollingframe_809.Size = UDim2.new(1, 0, 1, 0)
+scrollingframe_809.Parent = scrollingframe_809
+local uilistlayout_391 = Instance.new("UIListLayout")
+uilistlayout_391.HorizontalAlignment = "Center"
+uilistlayout_391.Padding = UDim.new(0, 8)
+uilistlayout_391.Parent = uilistlayout_391
+local textbutton_354 = Instance.new("TextButton")
+textbutton_354.BackgroundTransparency = 1
+textbutton_354.TextColor3 = Color3.fromRGB(140, 140, 140)
+textbutton_354.Text = "Settings"
+textbutton_354.Font = "GothamBold"
+textbutton_354.TextSize = 10
+textbutton_354.Size = UDim2.new(0.25, 0, 1, 0)
+textbutton_354.Parent = textbutton_354
+textbutton_354.MouseButton1Click:Connect(function(arg1, arg2)
+scrollingframe_40.Visible = false
+scrollingframe_809.Visible = false
+scrollingframe_810.Visible = false
+scrollingframe_431.Visible = false
+textbutton_650.TextColor3 = Color3.fromRGB(140, 140, 140)
+textbutton_794.TextColor3 = Color3.fromRGB(140, 140, 140)
+textbutton_271.TextColor3 = Color3.fromRGB(140, 140, 140)
+scrollingframe_809.Visible = true
+textbutton_354.TextColor3 = Color3.fromRGB(35, 125, 255)
+end)
+textbutton_271.TextColor3 = Color3.fromRGB(35, 125, 255)
+scrollingframe_431.Visible = true
+task.spawn(function(s, a, H, b, q)
+task.wait(1)
+local v2 = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+local _3 = 0 < v2.JumpPower
+end)
+game.Players.LocalPlayer.CharacterAdded:Connect(function(arg1, arg2)
+task.wait(1)
+local v2 = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+local _3 = 0 < v2.JumpPower
+end)
+RunService.Heartbeat:Connect(function(s, a, H) end)
+UserInputService.InputBegan:Connect(function(s, a, H, b, q) end)
+UserInputService.InputEnded:Connect(function(s, a, H) end)
+game.Players.LocalPlayer.CharacterAdded:Connect(function(s, a, H)
+task.wait(1)
+end)
+local frame_860 = Instance.new("Frame")
+frame_860.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_860.BackgroundTransparency = 0.5
+frame_860.Size = UDim2.new(0.92, 0, 0, 50)
+frame_860.Parent = frame_860
+local uicorner_441 = Instance.new("UICorner")
+uicorner_441.CornerRadius = UDim.new(0, 8)
+uicorner_441.Parent = uicorner_441
+local uistroke_984 = Instance.new("UIStroke")
+uistroke_984.Thickness = 1
+uistroke_984.Color = Color3.fromRGB(35, 125, 255)
+uistroke_984.Transparency = 0.8
+uistroke_984.Parent = uistroke_984
+local textlabel_910 = Instance.new("TextLabel")
+textlabel_910.Text = "Auto Grab"
+textlabel_910.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_910.TextColor3 = Color3.new(1, 1, 1)
+textlabel_910.TextXAlignment = "Left"
+textlabel_910.BackgroundTransparency = 1
+textlabel_910.Font = "GothamBold"
+textlabel_910.TextSize = 13
+textlabel_910.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_910.Parent = textlabel_910
+local frame_845 = Instance.new("Frame")
+frame_845.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_845.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_845.Size = UDim2.new(0, 42, 0, 20)
+frame_845.Parent = frame_845
+local uicorner_50 = Instance.new("UICorner")
+uicorner_50.CornerRadius = UDim.new(1, 0)
+uicorner_50.Parent = uicorner_50
+local frame_1 = Instance.new("Frame")
+frame_1.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_1.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_1.Size = UDim2.new(0, 16, 0, 16)
+frame_1.Parent = frame_1
+local uicorner_418 = Instance.new("UICorner")
+uicorner_418.CornerRadius = UDim.new(1, 0)
+uicorner_418.Parent = uicorner_418
+local textbutton_166 = Instance.new("TextButton")
+textbutton_166.BackgroundTransparency = 1
+textbutton_166.Text = ""
+textbutton_166.Size = UDim2.new(1, 0, 1, 0)
+textbutton_166.Parent = textbutton_166
+textbutton_166.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+RunService.Heartbeat:Connect(function(s, a, H)
+local v1 = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+local v2 = Workspace:FindFirstChild("Plots")
+local v3 = v2:GetChildren()
+end)
+end)
+local frame_194 = Instance.new("Frame")
+frame_194.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_194.BackgroundTransparency = 0.5
+frame_194.Size = UDim2.new(0.92, 0, 0, 50)
+frame_194.Parent = frame_194
+local uicorner_603 = Instance.new("UICorner")
+uicorner_603.CornerRadius = UDim.new(0, 8)
+uicorner_603.Parent = uicorner_603
+local uistroke_119 = Instance.new("UIStroke")
+uistroke_119.Thickness = 1
+uistroke_119.Color = Color3.fromRGB(35, 125, 255)
+uistroke_119.Transparency = 0.8
+uistroke_119.Parent = uistroke_119
+local textlabel_891 = Instance.new("TextLabel")
+textlabel_891.Text = "Hit Circle"
+textlabel_891.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_891.TextColor3 = Color3.new(1, 1, 1)
+textlabel_891.TextXAlignment = "Left"
+textlabel_891.BackgroundTransparency = 1
+textlabel_891.Font = "GothamBold"
+textlabel_891.TextSize = 13
+textlabel_891.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_891.Parent = textlabel_891
+local frame_41 = Instance.new("Frame")
+frame_41.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_41.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_41.Size = UDim2.new(0, 42, 0, 20)
+frame_41.Parent = frame_41
+local uicorner_561 = Instance.new("UICorner")
+uicorner_561.CornerRadius = UDim.new(1, 0)
+uicorner_561.Parent = uicorner_561
+local frame_903 = Instance.new("Frame")
+frame_903.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_903.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_903.Size = UDim2.new(0, 16, 0, 16)
+frame_903.Parent = frame_903
+local uicorner_471 = Instance.new("UICorner")
+uicorner_471.CornerRadius = UDim.new(1, 0)
+uicorner_471.Parent = uicorner_471
+local textbutton_381 = Instance.new("TextButton")
+textbutton_381.BackgroundTransparency = 1
+textbutton_381.Text = ""
+textbutton_381.Size = UDim2.new(1, 0, 1, 0)
+textbutton_381.Parent = textbutton_381
+textbutton_381.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+local v5 = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+local attachment_174 = Instance.new("Attachment")
+local alignorientation_281 = Instance.new("AlignOrientation")
+alignorientation_281.Attachment0 = {}
+alignorientation_281.Mode = Enum.OrientationAlignmentMode.OneAttachment
+alignorientation_281.RigidityEnabled = true
+local part_53 = Instance.new("Part")
+part_53.Shape = Enum.PartType.Cylinder
+part_53.Material = Enum.Material.Neon
+part_53.Size = Vector3.new(0.05, 14.5, 14.5)
+part_53.Color = Color3.fromRGB(35, 125, 255)
+part_53.CanCollide = false
+part_53.Massless = true
+part_53.Parent = part_53
+local weld_967 = Instance.new("Weld")
+weld_967.Part0 = v5
+weld_967.Part1 = {}
+local calc_22 = (CFrame.new(0, -1, 0) * CFrame.Angles(0, 0, 1.5707963267949))
+weld_967.C0 = calc_22
+weld_967.Parent = weld_967
+RunService.RenderStepped:Connect(function(s, a)
+local v1 = Players:GetPlayers()
+alignorientation_281.Enabled = false
+game.Players.LocalPlayer.Character.Humanoid.AutoRotate = true
+end)
+end)
+local frame_320 = Instance.new("Frame")
+frame_320.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_320.BackgroundTransparency = 0.5
+frame_320.Size = UDim2.new(0.92, 0, 0, 50)
+frame_320.Parent = frame_320
+local uicorner_66 = Instance.new("UICorner")
+uicorner_66.CornerRadius = UDim.new(0, 8)
+uicorner_66.Parent = uicorner_66
+local uistroke_617 = Instance.new("UIStroke")
+uistroke_617.Thickness = 1
+uistroke_617.Color = Color3.fromRGB(35, 125, 255)
+uistroke_617.Transparency = 0.8
+uistroke_617.Parent = uistroke_617
+local textlabel_130 = Instance.new("TextLabel")
+textlabel_130.Text = "Spam Bat"
+textlabel_130.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_130.TextColor3 = Color3.new(1, 1, 1)
+textlabel_130.TextXAlignment = "Left"
+textlabel_130.BackgroundTransparency = 1
+textlabel_130.Font = "GothamBold"
+textlabel_130.TextSize = 13
+textlabel_130.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_130.Parent = textlabel_130
+local frame_457 = Instance.new("Frame")
+frame_457.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_457.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_457.Size = UDim2.new(0, 42, 0, 20)
+frame_457.Parent = frame_457
+local uicorner_971 = Instance.new("UICorner")
+uicorner_971.CornerRadius = UDim.new(1, 0)
+uicorner_971.Parent = uicorner_971
+local frame_416 = Instance.new("Frame")
+frame_416.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_416.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_416.Size = UDim2.new(0, 16, 0, 16)
+frame_416.Parent = frame_416
+local uicorner_511 = Instance.new("UICorner")
+uicorner_511.CornerRadius = UDim.new(1, 0)
+uicorner_511.Parent = uicorner_511
+local textbutton_948 = Instance.new("TextButton")
+textbutton_948.BackgroundTransparency = 1
+textbutton_948.Text = ""
+textbutton_948.Size = UDim2.new(1, 0, 1, 0)
+textbutton_948.Parent = textbutton_948
+textbutton_948.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+RunService.Heartbeat:Connect(function(s, a)
+local v1 = game.Players.LocalPlayer:FindFirstChildOfClass("Backpack")
+local v2 = game.Players.LocalPlayer.Character:GetChildren()
+local v3 = v1:GetChildren()
+local v4 = game.Players.LocalPlayer.Character:FindFirstChild("Bat")
+tick()
+local v6 = v4:Activate()
+end)
+end)
+local frame_277 = Instance.new("Frame")
+frame_277.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_277.BackgroundTransparency = 0.5
+frame_277.Size = UDim2.new(0.92, 0, 0, 50)
+frame_277.Parent = frame_277
+local uicorner_952 = Instance.new("UICorner")
+uicorner_952.CornerRadius = UDim.new(0, 8)
+uicorner_952.Parent = uicorner_952
+local uistroke_932 = Instance.new("UIStroke")
+uistroke_932.Thickness = 1
+uistroke_932.Color = Color3.fromRGB(35, 125, 255)
+uistroke_932.Transparency = 0.8
+uistroke_932.Parent = uistroke_932
+local textlabel_188 = Instance.new("TextLabel")
+textlabel_188.Text = "Bat Aimbot"
+textlabel_188.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_188.TextColor3 = Color3.new(1, 1, 1)
+textlabel_188.TextXAlignment = "Left"
+textlabel_188.BackgroundTransparency = 1
+textlabel_188.Font = "GothamBold"
+textlabel_188.TextSize = 13
+textlabel_188.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_188.Parent = textlabel_188
+local frame_797 = Instance.new("Frame")
+frame_797.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_797.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_797.Size = UDim2.new(0, 42, 0, 20)
+frame_797.Parent = frame_797
+local uicorner_982 = Instance.new("UICorner")
+uicorner_982.CornerRadius = UDim.new(1, 0)
+uicorner_982.Parent = uicorner_982
+local frame_188 = Instance.new("Frame")
+frame_188.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_188.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_188.Size = UDim2.new(0, 16, 0, 16)
+frame_188.Parent = frame_188
+local uicorner_216 = Instance.new("UICorner")
+uicorner_216.CornerRadius = UDim.new(1, 0)
+uicorner_216.Parent = uicorner_216
+local textbutton_148 = Instance.new("TextButton")
+textbutton_148.BackgroundTransparency = 1
+textbutton_148.Text = ""
+textbutton_148.Size = UDim2.new(1, 0, 1, 0)
+textbutton_148.Parent = textbutton_148
+textbutton_148.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+RunService.Heartbeat:Connect(function(s, a)
+local v1 = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+local v2 = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+local v3 = game.Players.LocalPlayer:FindFirstChildOfClass("Backpack")
+local v4 = game.Players.LocalPlayer.Character:GetChildren()
+local v5 = v3:GetChildren()
+local v6 = game.Players.LocalPlayer.Character:FindFirstChild("Bat")
+local v7 = Players:GetPlayers()
+end)
+end)
+local screengui_381 = Instance.new("ScreenGui")
+screengui_381.Name = "Kawatan_StealPanel"
+screengui_381.ResetOnSpawn = false
+screengui_381.Parent = screengui_381
+screengui_381.Enabled = false
+local frame_818 = Instance.new("Frame")
+frame_818.BackgroundColor3 = Color3.fromRGB(11, 14, 20)
+frame_818.Name = "StealPanel"
+frame_818.Active = true
+frame_818.BorderSizePixel = 0
+frame_818.Position = UDim2.new(0.5, -115, 0.35, 0)
+frame_818.BackgroundTransparency = 0.1
+frame_818.Size = UDim2.new(0, 230, 0, 140)
+frame_818.Parent = frame_818
+local uicorner_266 = Instance.new("UICorner")
+uicorner_266.CornerRadius = UDim.new(0, 12)
+uicorner_266.Parent = uicorner_266
+local uistroke_273 = Instance.new("UIStroke")
+uistroke_273.Thickness = 2
+uistroke_273.Color = Color3.fromRGB(35, 125, 255)
+uistroke_273.Parent = uistroke_273
+local textbutton_859 = Instance.new("TextButton")
+textbutton_859.BackgroundColor3 = Color3.fromRGB(20, 28, 45)
+textbutton_859.Position = UDim2.new(1, -28, 0, 5)
+textbutton_859.BorderSizePixel = 0
+textbutton_859.TextColor3 = Color3.fromRGB(35, 125, 255)
+textbutton_859.ZIndex = 10
+textbutton_859.Text = "—"
+textbutton_859.Font = "GothamBold"
+textbutton_859.TextSize = 14
+textbutton_859.Size = UDim2.new(0, 24, 0, 24)
+textbutton_859.Parent = textbutton_859
+local uicorner_827 = Instance.new("UICorner")
+uicorner_827.CornerRadius = UDim.new(0, 6)
+uicorner_827.Parent = uicorner_827
+local uistroke_176 = Instance.new("UIStroke")
+uistroke_176.Thickness = 1
+uistroke_176.Color = Color3.fromRGB(35, 125, 255)
+uistroke_176.Transparency = 0.5
+uistroke_176.Parent = uistroke_176
+textbutton_859.MouseButton1Click:Connect(function(s, a, H)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2,
+Enum.EasingStyle.Quad), {
+Size = UDim2.new(0, frame_818.Size.X.Offset, 0, 34)
+})
+local v2 = v1:Play()
+textbutton_859.Text = "+"
+frame_818.ClipsDescendants = true
+end)
+local textlabel_330 = Instance.new("TextLabel")
+textlabel_330.Text = "Auto Steal"
+textlabel_330.Position = UDim2.new(0, 0, 0, 0)
+textlabel_330.TextColor3 = Color3.fromRGB(35, 125, 255)
+textlabel_330.TextXAlignment = "Center"
+textlabel_330.BackgroundTransparency = 1
+textlabel_330.Font = "GothamBold"
+textlabel_330.TextSize = 14
+textlabel_330.Size = UDim2.new(1, 0, 0, 32)
+textlabel_330.Parent = textlabel_330
+local frame_209 = Instance.new("Frame")
+frame_209.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+frame_209.BorderSizePixel = 0
+frame_209.Position = UDim2.new(0.075, 0, 0, 33)
+frame_209.BackgroundTransparency = 0.6
+frame_209.Size = UDim2.new(0.85, 0, 0, 1)
+frame_209.Parent = frame_209
+local textlabel_350 = Instance.new("TextLabel")
+textlabel_350.Text = "Status: OFF"
+textlabel_350.Position = UDim2.new(0, 0, 0, 38)
+textlabel_350.TextColor3 = Color3.fromRGB(140, 140, 140)
+textlabel_350.TextXAlignment = "Center"
+textlabel_350.BackgroundTransparency = 1
+textlabel_350.Font = "GothamBold"
+textlabel_350.TextSize = 11
+textlabel_350.Size = UDim2.new(1, 0, 0, 20)
+textlabel_350.Parent = textlabel_350
+local textbutton_610 = Instance.new("TextButton")
+textbutton_610.BackgroundColor3 = Color3.fromRGB(22, 30, 45)
+textbutton_610.Position = UDim2.new(0.05, 0, 0, 65)
+textbutton_610.BorderSizePixel = 0
+textbutton_610.TextColor3 = Color3.new(1, 1, 1)
+textbutton_610.Text = "▶ Right"
+textbutton_610.Font = "GothamBold"
+textbutton_610.TextSize = 13
+textbutton_610.Size = UDim2.new(0.42, 0, 0, 40)
+textbutton_610.Parent = textbutton_610
+local uicorner_261 = Instance.new("UICorner")
+uicorner_261.CornerRadius = UDim.new(0, 8)
+uicorner_261.Parent = uicorner_261
+local uistroke_318 = Instance.new("UIStroke")
+uistroke_318.Thickness = 1.5
+uistroke_318.Color = Color3.fromRGB(35, 125, 255)
+uistroke_318.Transparency = 0.4
+uistroke_318.Parent = uistroke_318
+local textbutton_930 = Instance.new("TextButton")
+textbutton_930.BackgroundColor3 = Color3.fromRGB(22, 30, 45)
+textbutton_930.Position = UDim2.new(0.53, 0, 0, 65)
+textbutton_930.BorderSizePixel = 0
+textbutton_930.TextColor3 = Color3.new(1, 1, 1)
+textbutton_930.Text = "◀ Left"
+textbutton_930.Font = "GothamBold"
+textbutton_930.TextSize = 13
+textbutton_930.Size = UDim2.new(0.42, 0, 0, 40)
+textbutton_930.Parent = textbutton_930
+local uicorner_327 = Instance.new("UICorner")
+uicorner_327.CornerRadius = UDim.new(0, 8)
+uicorner_327.Parent = uicorner_327
+local uistroke_935 = Instance.new("UIStroke")
+uistroke_935.Thickness = 1.5
+uistroke_935.Color = Color3.fromRGB(35, 125, 255)
+uistroke_935.Transparency = 0.4
+uistroke_935.Parent = uistroke_935
+local textbutton_60 = Instance.new("TextButton")
+textbutton_60.BackgroundColor3 = Color3.fromRGB(40, 15, 15)
+textbutton_60.Position = UDim2.new(0.05, 0, 0, 112)
+textbutton_60.BorderSizePixel = 0
+textbutton_60.TextColor3 = Color3.fromRGB(230, 80, 80)
+textbutton_60.Text = "■ Stop"
+textbutton_60.Font = "GothamBold"
+textbutton_60.TextSize = 11
+textbutton_60.Size = UDim2.new(0.9, 0, 0, 22)
+textbutton_60.Parent = textbutton_60
+local uicorner_783 = Instance.new("UICorner")
+uicorner_783.CornerRadius = UDim.new(0, 6)
+uicorner_783.Parent = uicorner_783
+local uistroke_906 = Instance.new("UIStroke")
+uistroke_906.Thickness = 1
+uistroke_906.Color = Color3.fromRGB(200, 50, 50)
+uistroke_906.Transparency = 0.5
+uistroke_906.Parent = uistroke_906
+textbutton_610.MouseButton1Click:Connect(function(s, a, H, b)
+textbutton_610.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+textbutton_610.TextColor3 = Color3.fromRGB(255, 255, 255)
+textbutton_930.BackgroundColor3 = Color3.fromRGB(22, 30, 45)
+textbutton_930.TextColor3 = Color3.fromRGB(200, 200, 200)
+local v5 = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+v5.AssemblyLinearVelocity = function(arg1, arg2) end
+task.spawn(function(s, a)
+local v1 = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+RunService.Heartbeat:Connect(function(s, a, H, b)
+local calc_1 = (Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, v1.Position.Y,
+Vector3.new(-470.6, -5.9, 34.4).Z) - v1.Position)
+local calc_2 = (calc_1.Magnitude * 0.04)
+local calc_3 = (1.35 - calc_2)
+end)
+local calc_3 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _4 = 1.35 < calc_3.Magnitude
+local v5 = RunService.Heartbeat:Wait()
+local calc_6 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _7 = 1.35 < calc_6.Magnitude
+local v8 = RunService.Heartbeat:Wait()
+local calc_9 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _10 = 1.35 < calc_9.Magnitude
+local v11 = RunService.Heartbeat:Wait()
+local calc_12 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _13 = 1.35 < calc_12.Magnitude
+local v14 = RunService.Heartbeat:Wait()
+local calc_15 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _16 = 1.35 < calc_15.Magnitude
+local v17 = RunService.Heartbeat:Wait()
+local calc_18 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _19 = 1.35 < calc_18.Magnitude
+local v20 = RunService.Heartbeat:Wait()
+local calc_21 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _22 = 1.35 < calc_21.Magnitude
+local v23 = RunService.Heartbeat:Wait()
+local calc_24 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _25 = 1.35 < calc_24.Magnitude
+local v26 = RunService.Heartbeat:Wait()
+local calc_27 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _28 = 1.35 < calc_27.Magnitude
+local v29 = RunService.Heartbeat:Wait()
+local calc_30 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _31 = 1.35 < calc_30.Magnitude
+local v32 = RunService.Heartbeat:Wait()
+local calc_33 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _34 = 1.35 < calc_33.Magnitude
+local v35 = RunService.Heartbeat:Wait()
+local calc_36 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _37 = 1.35 < calc_36.Magnitude
+local v38 = RunService.Heartbeat:Wait()
+local calc_39 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _40 = 1.35 < calc_39.Magnitude
+local v41 = RunService.Heartbeat:Wait()
+local calc_42 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _43 = 1.35 < calc_42.Magnitude
+local v44 = RunService.Heartbeat:Wait()
+local calc_45 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _46 = 1.35 < calc_45.Magnitude
+local v47 = RunService.Heartbeat:Wait()
+local calc_48 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _49 = 1.35 < calc_48.Magnitude
+local v50 = RunService.Heartbeat:Wait()
+local calc_51 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _52 = 1.35 < calc_51.Magnitude
+local v53 = RunService.Heartbeat:Wait()
+local calc_54 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _55 = 1.35 < calc_54.Magnitude
+local v56 = RunService.Heartbeat:Wait()
+local calc_57 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _58 = 1.35 < calc_57.Magnitude
+local v59 = RunService.Heartbeat:Wait()
+local calc_60 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _61 = 1.35 < calc_60.Magnitude
+local v62 = RunService.Heartbeat:Wait()
+local calc_63 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _64 = 1.35 < calc_63.Magnitude
+local v65 = RunService.Heartbeat:Wait()
+local calc_66 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _67 = 1.35 < calc_66.Magnitude
+local v68 = RunService.Heartbeat:Wait()
+local calc_69 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _70 = 1.35 < calc_69.Magnitude
+local v71 = RunService.Heartbeat:Wait()
+local calc_72 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _73 = 1.35 < calc_72.Magnitude
+local v74 = RunService.Heartbeat:Wait()
+local calc_75 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _76 = 1.35 < calc_75.Magnitude
+local v77 = RunService.Heartbeat:Wait()
+local calc_78 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _79 = 1.35 < calc_78.Magnitude
+local v80 = RunService.Heartbeat:Wait()
+local calc_81 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _82 = 1.35 < calc_81.Magnitude
+local v83 = RunService.Heartbeat:Wait()
+local calc_84 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _85 = 1.35 < calc_84.Magnitude
+local v86 = RunService.Heartbeat:Wait()
+local calc_87 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _88 = 1.35 < calc_87.Magnitude
+local v89 = RunService.Heartbeat:Wait()
+local calc_90 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _91 = 1.35 < calc_90.Magnitude
+local v92 = RunService.Heartbeat:Wait()
+local calc_93 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _94 = 1.35 < calc_93.Magnitude
+local v95 = RunService.Heartbeat:Wait()
+local calc_96 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _97 = 1.35 < calc_96.Magnitude
+local v98 = RunService.Heartbeat:Wait()
+local calc_99 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _100 = 1.35 < calc_99.Magnitude
+local v101 = RunService.Heartbeat:Wait()
+local calc_102 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _103 = 1.35 < calc_102.Magnitude
+local v104 = RunService.Heartbeat:Wait()
+local calc_105 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _106 = 1.35 < calc_105.Magnitude
+local v107 = RunService.Heartbeat:Wait()
+local calc_108 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _109 = 1.35 < calc_108.Magnitude
+local v110 = RunService.Heartbeat:Wait()
+local calc_111 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _112 = 1.35 < calc_111.Magnitude
+local v113 = RunService.Heartbeat:Wait()
+local calc_114 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _115 = 1.35 < calc_114.Magnitude
+local v116 = RunService.Heartbeat:Wait()
+local calc_117 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _118 = 1.35 < calc_117.Magnitude
+local v119 = RunService.Heartbeat:Wait()
+local calc_120 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _121 = 1.35 < calc_120.Magnitude
+local v122 = RunService.Heartbeat:Wait()
+local calc_123 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _124 = 1.35 < calc_123.Magnitude
+local v125 = RunService.Heartbeat:Wait()
+local calc_126 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _127 = 1.35 < calc_126.Magnitude
+local v128 = RunService.Heartbeat:Wait()
+local calc_129 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _130 = 1.35 < calc_129.Magnitude
+local v131 = RunService.Heartbeat:Wait()
+local calc_132 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _133 = 1.35 < calc_132.Magnitude
+local v134 = RunService.Heartbeat:Wait()
+local calc_135 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _136 = 1.35 < calc_135.Magnitude
+local v137 = RunService.Heartbeat:Wait()
+local calc_138 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _139 = 1.35 < calc_138.Magnitude
+local v140 = RunService.Heartbeat:Wait()
+local calc_141 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _142 = 1.35 < calc_141.Magnitude
+local v143 = RunService.Heartbeat:Wait()
+local calc_144 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _145 = 1.35 < calc_144.Magnitude
+local v146 = RunService.Heartbeat:Wait()
+local calc_147 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _148 = 1.35 < calc_147.Magnitude
+local v149 = RunService.Heartbeat:Wait()
+local calc_150 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _151 = 1.35 < calc_150.Magnitude
+local v152 = RunService.Heartbeat:Wait()
+local calc_153 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _154 = 1.35 < calc_153.Magnitude
+local v155 = RunService.Heartbeat:Wait()
+local calc_156 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _157 = 1.35 < calc_156.Magnitude
+local v158 = RunService.Heartbeat:Wait()
+local calc_159 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _160 = 1.35 < calc_159.Magnitude
+local v161 = RunService.Heartbeat:Wait()
+local calc_162 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _163 = 1.35 < calc_162.Magnitude
+local v164 = RunService.Heartbeat:Wait()
+local calc_165 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _166 = 1.35 < calc_165.Magnitude
+local v167 = RunService.Heartbeat:Wait()
+local calc_168 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _169 = 1.35 < calc_168.Magnitude
+local v170 = RunService.Heartbeat:Wait()
+local calc_171 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _172 = 1.35 < calc_171.Magnitude
+local v173 = RunService.Heartbeat:Wait()
+local calc_174 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _175 = 1.35 < calc_174.Magnitude
+local v176 = RunService.Heartbeat:Wait()
+local calc_177 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _178 = 1.35 < calc_177.Magnitude
+local v179 = RunService.Heartbeat:Wait()
+local calc_180 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _181 = 1.35 < calc_180.Magnitude
+local v182 = RunService.Heartbeat:Wait()
+local calc_183 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _184 = 1.35 < calc_183.Magnitude
+local v185 = RunService.Heartbeat:Wait()
+local calc_186 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _187 = 1.35 < calc_186.Magnitude
+local v188 = RunService.Heartbeat:Wait()
+local calc_189 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _190 = 1.35 < calc_189.Magnitude
+local v191 = RunService.Heartbeat:Wait()
+local calc_192 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _193 = 1.35 < calc_192.Magnitude
+local v194 = RunService.Heartbeat:Wait()
+local calc_195 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _196 = 1.35 < calc_195.Magnitude
+local v197 = RunService.Heartbeat:Wait()
+local calc_198 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _199 = 1.35 < calc_198.Magnitude
+local v200 = RunService.Heartbeat:Wait()
+local calc_201 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _202 = 1.35 < calc_201.Magnitude
+local v203 = RunService.Heartbeat:Wait()
+local calc_204 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _205 = 1.35 < calc_204.Magnitude
+local v206 = RunService.Heartbeat:Wait()
+local calc_207 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _208 = 1.35 < calc_207.Magnitude
+local v209 = RunService.Heartbeat:Wait()
+local calc_210 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _211 = 1.35 < calc_210.Magnitude
+local v212 = RunService.Heartbeat:Wait()
+local calc_213 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _214 = 1.35 < calc_213.Magnitude
+local v215 = RunService.Heartbeat:Wait()
+local calc_216 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _217 = 1.35 < calc_216.Magnitude
+local v218 = RunService.Heartbeat:Wait()
+local calc_219 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _220 = 1.35 < calc_219.Magnitude
+local v221 = RunService.Heartbeat:Wait()
+local calc_222 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _223 = 1.35 < calc_222.Magnitude
+local v224 = RunService.Heartbeat:Wait()
+local calc_225 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _226 = 1.35 < calc_225.Magnitude
+local v227 = RunService.Heartbeat:Wait()
+local calc_228 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _229 = 1.35 < calc_228.Magnitude
+local v230 = RunService.Heartbeat:Wait()
+local calc_231 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _232 = 1.35 < calc_231.Magnitude
+local v233 = RunService.Heartbeat:Wait()
+local calc_234 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _235 = 1.35 < calc_234.Magnitude
+local v236 = RunService.Heartbeat:Wait()
+local calc_237 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _238 = 1.35 < calc_237.Magnitude
+local v239 = RunService.Heartbeat:Wait()
+local calc_240 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _241 = 1.35 < calc_240.Magnitude
+local v242 = RunService.Heartbeat:Wait()
+local calc_243 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _244 = 1.35 < calc_243.Magnitude
+local v245 = RunService.Heartbeat:Wait()
+local calc_246 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _247 = 1.35 < calc_246.Magnitude
+local v248 = RunService.Heartbeat:Wait()
+local calc_249 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _250 = 1.35 < calc_249.Magnitude
+local v251 = RunService.Heartbeat:Wait()
+local calc_252 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _253 = 1.35 < calc_252.Magnitude
+local v254 = RunService.Heartbeat:Wait()
+local calc_255 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _256 = 1.35 < calc_255.Magnitude
+local v257 = RunService.Heartbeat:Wait()
+local calc_258 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _259 = 1.35 < calc_258.Magnitude
+local v260 = RunService.Heartbeat:Wait()
+local calc_261 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _262 = 1.35 < calc_261.Magnitude
+local v263 = RunService.Heartbeat:Wait()
+local calc_264 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _265 = 1.35 < calc_264.Magnitude
+local v266 = RunService.Heartbeat:Wait()
+local calc_267 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _268 = 1.35 < calc_267.Magnitude
+local v269 = RunService.Heartbeat:Wait()
+local calc_270 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _271 = 1.35 < calc_270.Magnitude
+local v272 = RunService.Heartbeat:Wait()
+local calc_273 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _274 = 1.35 < calc_273.Magnitude
+local v275 = RunService.Heartbeat:Wait()
+local calc_276 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _277 = 1.35 < calc_276.Magnitude
+local v278 = RunService.Heartbeat:Wait()
+local calc_279 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _280 = 1.35 < calc_279.Magnitude
+local v281 = RunService.Heartbeat:Wait()
+local calc_282 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _283 = 1.35 < calc_282.Magnitude
+local v284 = RunService.Heartbeat:Wait()
+local calc_285 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _286 = 1.35 < calc_285.Magnitude
+local v287 = RunService.Heartbeat:Wait()
+local calc_288 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _289 = 1.35 < calc_288.Magnitude
+local v290 = RunService.Heartbeat:Wait()
+local calc_291 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _292 = 1.35 < calc_291.Magnitude
+local v293 = RunService.Heartbeat:Wait()
+local calc_294 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _295 = 1.35 < calc_294.Magnitude
+local v296 = RunService.Heartbeat:Wait()
+local calc_297 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _298 = 1.35 < calc_297.Magnitude
+local v299 = RunService.Heartbeat:Wait()
+local calc_300 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _301 = 1.35 < calc_300.Magnitude
+local v302 = RunService.Heartbeat:Wait()
+local calc_303 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _304 = 1.35 < calc_303.Magnitude
+local v305 = RunService.Heartbeat:Wait()
+local calc_306 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _307 = 1.35 < calc_306.Magnitude
+local v308 = RunService.Heartbeat:Wait()
+local calc_309 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _310 = 1.35 < calc_309.Magnitude
+local v311 = RunService.Heartbeat:Wait()
+local calc_312 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _313 = 1.35 < calc_312.Magnitude
+local v314 = RunService.Heartbeat:Wait()
+local calc_315 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _316 = 1.35 < calc_315.Magnitude
+local v317 = RunService.Heartbeat:Wait()
+local calc_318 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _319 = 1.35 < calc_318.Magnitude
+local v320 = RunService.Heartbeat:Wait()
+local calc_321 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _322 = 1.35 < calc_321.Magnitude
+local v323 = RunService.Heartbeat:Wait()
+local calc_324 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _325 = 1.35 < calc_324.Magnitude
+local v326 = RunService.Heartbeat:Wait()
+local calc_327 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _328 = 1.35 < calc_327.Magnitude
+local v329 = RunService.Heartbeat:Wait()
+local calc_330 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _331 = 1.35 < calc_330.Magnitude
+local v332 = RunService.Heartbeat:Wait()
+local calc_333 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _334 = 1.35 < calc_333.Magnitude
+local v335 = RunService.Heartbeat:Wait()
+local calc_336 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _337 = 1.35 < calc_336.Magnitude
+local v338 = RunService.Heartbeat:Wait()
+local calc_339 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _340 = 1.35 < calc_339.Magnitude
+local v341 = RunService.Heartbeat:Wait()
+local calc_342 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _343 = 1.35 < calc_342.Magnitude
+local v344 = RunService.Heartbeat:Wait()
+local calc_345 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _346 = 1.35 < calc_345.Magnitude
+local v347 = RunService.Heartbeat:Wait()
+local calc_348 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _349 = 1.35 < calc_348.Magnitude
+local v350 = RunService.Heartbeat:Wait()
+local calc_351 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _352 = 1.35 < calc_351.Magnitude
+local v353 = RunService.Heartbeat:Wait()
+local calc_354 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _355 = 1.35 < calc_354.Magnitude
+local v356 = RunService.Heartbeat:Wait()
+local calc_357 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _358 = 1.35 < calc_357.Magnitude
+local v359 = RunService.Heartbeat:Wait()
+local calc_360 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _361 = 1.35 < calc_360.Magnitude
+local v362 = RunService.Heartbeat:Wait()
+local calc_363 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _364 = 1.35 < calc_363.Magnitude
+local v365 = RunService.Heartbeat:Wait()
+local calc_366 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _367 = 1.35 < calc_366.Magnitude
+local v368 = RunService.Heartbeat:Wait()
+local calc_369 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _370 = 1.35 < calc_369.Magnitude
+local v371 = RunService.Heartbeat:Wait()
+local calc_372 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _373 = 1.35 < calc_372.Magnitude
+local v374 = RunService.Heartbeat:Wait()
+local calc_375 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _376 = 1.35 < calc_375.Magnitude
+local v377 = RunService.Heartbeat:Wait()
+local calc_378 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _379 = 1.35 < calc_378.Magnitude
+local v380 = RunService.Heartbeat:Wait()
+local calc_381 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _382 = 1.35 < calc_381.Magnitude
+local v383 = RunService.Heartbeat:Wait()
+local calc_384 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _385 = 1.35 < calc_384.Magnitude
+local v386 = RunService.Heartbeat:Wait()
+local calc_387 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _388 = 1.35 < calc_387.Magnitude
+local v389 = RunService.Heartbeat:Wait()
+local calc_390 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _391 = 1.35 < calc_390.Magnitude
+local v392 = RunService.Heartbeat:Wait()
+local calc_393 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _394 = 1.35 < calc_393.Magnitude
+local v395 = RunService.Heartbeat:Wait()
+local calc_396 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _397 = 1.35 < calc_396.Magnitude
+local v398 = RunService.Heartbeat:Wait()
+local calc_399 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _400 = 1.35 < calc_399.Magnitude
+local v401 = RunService.Heartbeat:Wait()
+local calc_402 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _403 = 1.35 < calc_402.Magnitude
+local v404 = RunService.Heartbeat:Wait()
+local calc_405 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _406 = 1.35 < calc_405.Magnitude
+local v407 = RunService.Heartbeat:Wait()
+local calc_408 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _409 = 1.35 < calc_408.Magnitude
+local v410 = RunService.Heartbeat:Wait()
+local calc_411 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _412 = 1.35 < calc_411.Magnitude
+local v413 = RunService.Heartbeat:Wait()
+local calc_414 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _415 = 1.35 < calc_414.Magnitude
+local v416 = RunService.Heartbeat:Wait()
+local calc_417 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _418 = 1.35 < calc_417.Magnitude
+local v419 = RunService.Heartbeat:Wait()
+local calc_420 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _421 = 1.35 < calc_420.Magnitude
+local v422 = RunService.Heartbeat:Wait()
+local calc_423 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _424 = 1.35 < calc_423.Magnitude
+local v425 = RunService.Heartbeat:Wait()
+local calc_426 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _427 = 1.35 < calc_426.Magnitude
+local v428 = RunService.Heartbeat:Wait()
+local calc_429 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _430 = 1.35 < calc_429.Magnitude
+local v431 = RunService.Heartbeat:Wait()
+local calc_432 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _433 = 1.35 < calc_432.Magnitude
+local v434 = RunService.Heartbeat:Wait()
+local calc_435 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _436 = 1.35 < calc_435.Magnitude
+local v437 = RunService.Heartbeat:Wait()
+local calc_438 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _439 = 1.35 < calc_438.Magnitude
+local v440 = RunService.Heartbeat:Wait()
+local calc_441 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _442 = 1.35 < calc_441.Magnitude
+local v443 = RunService.Heartbeat:Wait()
+local calc_444 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _445 = 1.35 < calc_444.Magnitude
+local v446 = RunService.Heartbeat:Wait()
+local calc_447 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-470.6, -5.9, 34.4).X, 0, Vector3.new(-470.6, -5.9, 34.4).Z))
+local _448 = 1.35 < calc_447.Magnitude
+local v449 = RunService.Heartbeat:Wait()
+end)
+textlabel_350.Text = "Status: RIGHT ▶"
+textlabel_350.TextColor3 = Color3.fromRGB(35, 125, 255)
+end)
+textbutton_930.MouseButton1Click:Connect(function(arg1, arg2)
+textbutton_930.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+textbutton_930.TextColor3 = Color3.fromRGB(255, 255, 255)
+textbutton_610.BackgroundColor3 = Color3.fromRGB(22, 30, 45)
+textbutton_610.TextColor3 = Color3.fromRGB(200, 200, 200)
+local v5 = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+v5.AssemblyLinearVelocity = function(arg1, arg2) end
+task.spawn(function(s, a)
+local v1 = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+RunService.Heartbeat:Connect(function(s, a, H, b)
+local calc_1 = (Vector3.new(Vector3.new(-474.7, -5.9, 91).X, v1.Position.Y,
+Vector3.new(-474.7, -5.9, 91).Z) - v1.Position)
+local calc_2 = (calc_1.Magnitude * 0.04)
+local calc_3 = (1.35 - calc_2)
+end)
+local calc_3 = (Vector3.new(v1.Position.X, 0, v1.Position.Z) -
+Vector3.new(Vector3.new(-474.7, -5.9, 91).X, 0, Vector3.new(-474.7, -5.9, 91).Z))
+local _4 = 1.35 < calc_3.Magnitude
+end)
+textlabel_350.Text = "Status: ◀ LEFT"
+textlabel_350.TextColor3 = Color3.fromRGB(35, 125, 255)
+end)
+textbutton_60.MouseButton1Click:Connect(function(s)
+textbutton_610.BackgroundColor3 = Color3.fromRGB(22, 30, 45)
+textbutton_610.TextColor3 = Color3.fromRGB(200, 200, 200)
+textbutton_930.BackgroundColor3 = Color3.fromRGB(22, 30, 45)
+textbutton_930.TextColor3 = Color3.fromRGB(200, 200, 200)
+local v5 = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+v5.AssemblyLinearVelocity = function(arg1, arg2) end
+textlabel_350.Text = "Status: OFF"
+textlabel_350.TextColor3 = Color3.fromRGB(140, 140, 140)
+end)
+frame_818.InputBegan:Connect(function(s, a) end)
+UserInputService.InputChanged:Connect(function(s, a, H, b, q, C)
+local calc_1 = (s.Position - s.Position)
+local calc_2 = (frame_818.Position.X.Offset + "calc_1.X")
+local calc_3 = (frame_818.Position.Y.Offset + "calc_1.Y")
+frame_818.Position = UDim2.new(frame_818.Position.X.Scale, calc_2,
+frame_818.Position.Y.Scale, calc_3)
+end)
+UserInputService.InputEnded:Connect(function(s) end)
+local frame_476 = Instance.new("Frame")
+frame_476.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_476.BackgroundTransparency = 0.5
+frame_476.Size = UDim2.new(0.92, 0, 0, 50)
+frame_476.Parent = frame_476
+local uicorner_294 = Instance.new("UICorner")
+uicorner_294.CornerRadius = UDim.new(0, 8)
+uicorner_294.Parent = uicorner_294
+local uistroke_854 = Instance.new("UIStroke")
+uistroke_854.Thickness = 1
+uistroke_854.Color = Color3.fromRGB(35, 125, 255)
+uistroke_854.Transparency = 0.8
+uistroke_854.Parent = uistroke_854
+local textlabel_753 = Instance.new("TextLabel")
+textlabel_753.Text = "Auto Steal Panel"
+textlabel_753.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_753.TextColor3 = Color3.new(1, 1, 1)
+textlabel_753.TextXAlignment = "Left"
+textlabel_753.BackgroundTransparency = 1
+textlabel_753.Font = "GothamBold"
+textlabel_753.TextSize = 13
+textlabel_753.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_753.Parent = textlabel_753
+local frame_247 = Instance.new("Frame")
+frame_247.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_247.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_247.Size = UDim2.new(0, 42, 0, 20)
+frame_247.Parent = frame_247
+local uicorner_787 = Instance.new("UICorner")
+uicorner_787.CornerRadius = UDim.new(1, 0)
+uicorner_787.Parent = uicorner_787
+local frame_940 = Instance.new("Frame")
+frame_940.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_940.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_940.Size = UDim2.new(0, 16, 0, 16)
+frame_940.Parent = frame_940
+local uicorner_45 = Instance.new("UICorner")
+uicorner_45.CornerRadius = UDim.new(1, 0)
+uicorner_45.Parent = uicorner_45
+local textbutton_770 = Instance.new("TextButton")
+textbutton_770.BackgroundTransparency = 1
+textbutton_770.Text = ""
+textbutton_770.Size = UDim2.new(1, 0, 1, 0)
+textbutton_770.Parent = textbutton_770
+textbutton_770.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+screengui_381.Enabled = true
+end)
+local frame_129 = Instance.new("Frame")
+frame_129.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_129.BackgroundTransparency = 0.5
+frame_129.Size = UDim2.new(0.92, 0, 0, 50)
+frame_129.Parent = frame_129
+local uicorner_260 = Instance.new("UICorner")
+uicorner_260.CornerRadius = UDim.new(0, 8)
+uicorner_260.Parent = uicorner_260
+local uistroke_918 = Instance.new("UIStroke")
+uistroke_918.Thickness = 1
+uistroke_918.Color = Color3.fromRGB(35, 125, 255)
+uistroke_918.Transparency = 0.8
+uistroke_918.Parent = uistroke_918
+local textlabel_509 = Instance.new("TextLabel")
+textlabel_509.Text = "Anti Ragdoll"
+textlabel_509.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_509.TextColor3 = Color3.new(1, 1, 1)
+textlabel_509.TextXAlignment = "Left"
+textlabel_509.BackgroundTransparency = 1
+textlabel_509.Font = "GothamBold"
+textlabel_509.TextSize = 13
+textlabel_509.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_509.Parent = textlabel_509
+local frame_79 = Instance.new("Frame")
+frame_79.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_79.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_79.Size = UDim2.new(0, 42, 0, 20)
+frame_79.Parent = frame_79
+local uicorner_184 = Instance.new("UICorner")
+uicorner_184.CornerRadius = UDim.new(1, 0)
+uicorner_184.Parent = uicorner_184
+local frame_781 = Instance.new("Frame")
+frame_781.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_781.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_781.Size = UDim2.new(0, 16, 0, 16)
+frame_781.Parent = frame_781
+local uicorner_937 = Instance.new("UICorner")
+uicorner_937.CornerRadius = UDim.new(1, 0)
+uicorner_937.Parent = uicorner_937
+local textbutton_12 = Instance.new("TextButton")
+textbutton_12.BackgroundTransparency = 1
+textbutton_12.Text = ""
+textbutton_12.Size = UDim2.new(1, 0, 1, 0)
+textbutton_12.Parent = textbutton_12
+textbutton_12.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+local v5 = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+local v6 = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+RunService.RenderStepped:Connect(function(s)
+Workspace.CurrentCamera.CameraSubject = v5
+end)
+game.Players.LocalPlayer.CharacterAdded:Connect(function(s, a, H, b, q)
+task.wait(0.5)
+local v2 = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+local v3 = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+end)
+task.spawn(function(s)
+task.wait()
+local v2 = v2:GetState()
+local v3 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v4 = Workspace.GetServerTimeNow(Workspace)
+local calc_5 = (v3 - v4)
+local _6 = 0 < calc_5
+local v7 = Workspace.GetServerTimeNow(Workspace)
+local v8 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v7)
+local v9 = game.Players.LocalPlayer.Character:GetDescendants()
+v2.WalkSpeed = 400
+local _11 = 0 < v2.Health
+local v12 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v15 = v2:GetState()
+local v16 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v17 = Workspace.GetServerTimeNow(Workspace)
+local calc_18 = (v16 - v17)
+local _19 = 0 < calc_18
+local v20 = Workspace.GetServerTimeNow(Workspace)
+local v21 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v20)
+local v22 = game.Players.LocalPlayer.Character:GetDescendants()
+local _23 = 0 < v2.Health
+local v24 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v27 = v2:GetState()
+local v28 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v29 = Workspace.GetServerTimeNow(Workspace)
+local calc_30 = (v28 - v29)
+local _31 = 0 < calc_30
+local v32 = Workspace.GetServerTimeNow(Workspace)
+local v33 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v32)
+local v34 = game.Players.LocalPlayer.Character:GetDescendants()
+local _35 = 0 < v2.Health
+local v36 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v39 = v2:GetState()
+local v40 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v41 = Workspace.GetServerTimeNow(Workspace)
+local calc_42 = (v40 - v41)
+local _43 = 0 < calc_42
+local v44 = Workspace.GetServerTimeNow(Workspace)
+local v45 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v44)
+local v46 = game.Players.LocalPlayer.Character:GetDescendants()
+local _47 = 0 < v2.Health
+local v48 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v51 = v2:GetState()
+local v52 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v53 = Workspace.GetServerTimeNow(Workspace)
+local calc_54 = (v52 - v53)
+local _55 = 0 < calc_54
+local v56 = Workspace.GetServerTimeNow(Workspace)
+local v57 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v56)
+local v58 = game.Players.LocalPlayer.Character:GetDescendants()
+local _59 = 0 < v2.Health
+local v60 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v63 = v2:GetState()
+local v64 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v65 = Workspace.GetServerTimeNow(Workspace)
+local calc_66 = (v64 - v65)
+local _67 = 0 < calc_66
+local v68 = Workspace.GetServerTimeNow(Workspace)
+local v69 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v68)
+local v70 = game.Players.LocalPlayer.Character:GetDescendants()
+local _71 = 0 < v2.Health
+local v72 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v75 = v2:GetState()
+local v76 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v77 = Workspace.GetServerTimeNow(Workspace)
+local calc_78 = (v76 - v77)
+local _79 = 0 < calc_78
+local v80 = Workspace.GetServerTimeNow(Workspace)
+local v81 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v80)
+local v82 = game.Players.LocalPlayer.Character:GetDescendants()
+local _83 = 0 < v2.Health
+local v84 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v87 = v2:GetState()
+local v88 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v89 = Workspace.GetServerTimeNow(Workspace)
+local calc_90 = (v88 - v89)
+local _91 = 0 < calc_90
+local v92 = Workspace.GetServerTimeNow(Workspace)
+local v93 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v92)
+local v94 = game.Players.LocalPlayer.Character:GetDescendants()
+local _95 = 0 < v2.Health
+local v96 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v99 = v2:GetState()
+local v100 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v101 = Workspace.GetServerTimeNow(Workspace)
+local calc_102 = (v100 - v101)
+local _103 = 0 < calc_102
+local v104 = Workspace.GetServerTimeNow(Workspace)
+local v105 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v104)
+local v106 = game.Players.LocalPlayer.Character:GetDescendants()
+local _107 = 0 < v2.Health
+local v108 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v111 = v2:GetState()
+local v112 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v113 = Workspace.GetServerTimeNow(Workspace)
+local calc_114 = (v112 - v113)
+local _115 = 0 < calc_114
+local v116 = Workspace.GetServerTimeNow(Workspace)
+local v117 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v116)
+local v118 = game.Players.LocalPlayer.Character:GetDescendants()
+local _119 = 0 < v2.Health
+local v120 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v123 = v2:GetState()
+local v124 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v125 = Workspace.GetServerTimeNow(Workspace)
+local calc_126 = (v124 - v125)
+local _127 = 0 < calc_126
+local v128 = Workspace.GetServerTimeNow(Workspace)
+local v129 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v128)
+local v130 = game.Players.LocalPlayer.Character:GetDescendants()
+local _131 = 0 < v2.Health
+local v132 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v135 = v2:GetState()
+local v136 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v137 = Workspace.GetServerTimeNow(Workspace)
+local calc_138 = (v136 - v137)
+local _139 = 0 < calc_138
+local v140 = Workspace.GetServerTimeNow(Workspace)
+local v141 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v140)
+local v142 = game.Players.LocalPlayer.Character:GetDescendants()
+local _143 = 0 < v2.Health
+local v144 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v147 = v2:GetState()
+local v148 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v149 = Workspace.GetServerTimeNow(Workspace)
+local calc_150 = (v148 - v149)
+local _151 = 0 < calc_150
+local v152 = Workspace.GetServerTimeNow(Workspace)
+local v153 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v152)
+local v154 = game.Players.LocalPlayer.Character:GetDescendants()
+local _155 = 0 < v2.Health
+local v156 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v159 = v2:GetState()
+local v160 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v161 = Workspace.GetServerTimeNow(Workspace)
+local calc_162 = (v160 - v161)
+local _163 = 0 < calc_162
+local v164 = Workspace.GetServerTimeNow(Workspace)
+local v165 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v164)
+local v166 = game.Players.LocalPlayer.Character:GetDescendants()
+local _167 = 0 < v2.Health
+local v168 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v171 = v2:GetState()
+local v172 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v173 = Workspace.GetServerTimeNow(Workspace)
+local calc_174 = (v172 - v173)
+local _175 = 0 < calc_174
+local v176 = Workspace.GetServerTimeNow(Workspace)
+local v177 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v176)
+local v178 = game.Players.LocalPlayer.Character:GetDescendants()
+local _179 = 0 < v2.Health
+local v180 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v183 = v2:GetState()
+local v184 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v185 = Workspace.GetServerTimeNow(Workspace)
+local calc_186 = (v184 - v185)
+local _187 = 0 < calc_186
+local v188 = Workspace.GetServerTimeNow(Workspace)
+local v189 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v188)
+local v190 = game.Players.LocalPlayer.Character:GetDescendants()
+local _191 = 0 < v2.Health
+local v192 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v195 = v2:GetState()
+local v196 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v197 = Workspace.GetServerTimeNow(Workspace)
+local calc_198 = (v196 - v197)
+local _199 = 0 < calc_198
+local v200 = Workspace.GetServerTimeNow(Workspace)
+local v201 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v200)
+local v202 = game.Players.LocalPlayer.Character:GetDescendants()
+local _203 = 0 < v2.Health
+local v204 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v207 = v2:GetState()
+local v208 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v209 = Workspace.GetServerTimeNow(Workspace)
+local calc_210 = (v208 - v209)
+local _211 = 0 < calc_210
+local v212 = Workspace.GetServerTimeNow(Workspace)
+local v213 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v212)
+local v214 = game.Players.LocalPlayer.Character:GetDescendants()
+local _215 = 0 < v2.Health
+local v216 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v219 = v2:GetState()
+local v220 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v221 = Workspace.GetServerTimeNow(Workspace)
+local calc_222 = (v220 - v221)
+local _223 = 0 < calc_222
+local v224 = Workspace.GetServerTimeNow(Workspace)
+local v225 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v224)
+local v226 = game.Players.LocalPlayer.Character:GetDescendants()
+local _227 = 0 < v2.Health
+local v228 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v231 = v2:GetState()
+local v232 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v233 = Workspace.GetServerTimeNow(Workspace)
+local calc_234 = (v232 - v233)
+local _235 = 0 < calc_234
+local v236 = Workspace.GetServerTimeNow(Workspace)
+local v237 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v236)
+local v238 = game.Players.LocalPlayer.Character:GetDescendants()
+local _239 = 0 < v2.Health
+local v240 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v243 = v2:GetState()
+local v244 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v245 = Workspace.GetServerTimeNow(Workspace)
+local calc_246 = (v244 - v245)
+local _247 = 0 < calc_246
+local v248 = Workspace.GetServerTimeNow(Workspace)
+local v249 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v248)
+local v250 = game.Players.LocalPlayer.Character:GetDescendants()
+local _251 = 0 < v2.Health
+local v252 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v255 = v2:GetState()
+local v256 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v257 = Workspace.GetServerTimeNow(Workspace)
+local calc_258 = (v256 - v257)
+local _259 = 0 < calc_258
+local v260 = Workspace.GetServerTimeNow(Workspace)
+local v261 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v260)
+local v262 = game.Players.LocalPlayer.Character:GetDescendants()
+local _263 = 0 < v2.Health
+local v264 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v267 = v2:GetState()
+local v268 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v269 = Workspace.GetServerTimeNow(Workspace)
+local calc_270 = (v268 - v269)
+local _271 = 0 < calc_270
+local v272 = Workspace.GetServerTimeNow(Workspace)
+local v273 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v272)
+local v274 = game.Players.LocalPlayer.Character:GetDescendants()
+local _275 = 0 < v2.Health
+local v276 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v279 = v2:GetState()
+local v280 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v281 = Workspace.GetServerTimeNow(Workspace)
+local calc_282 = (v280 - v281)
+local _283 = 0 < calc_282
+local v284 = Workspace.GetServerTimeNow(Workspace)
+local v285 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v284)
+local v286 = game.Players.LocalPlayer.Character:GetDescendants()
+local _287 = 0 < v2.Health
+local v288 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v291 = v2:GetState()
+local v292 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v293 = Workspace.GetServerTimeNow(Workspace)
+local calc_294 = (v292 - v293)
+local _295 = 0 < calc_294
+local v296 = Workspace.GetServerTimeNow(Workspace)
+local v297 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v296)
+local v298 = game.Players.LocalPlayer.Character:GetDescendants()
+local _299 = 0 < v2.Health
+local v300 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v303 = v2:GetState()
+local v304 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v305 = Workspace.GetServerTimeNow(Workspace)
+local calc_306 = (v304 - v305)
+local _307 = 0 < calc_306
+local v308 = Workspace.GetServerTimeNow(Workspace)
+local v309 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v308)
+local v310 = game.Players.LocalPlayer.Character:GetDescendants()
+local _311 = 0 < v2.Health
+local v312 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v315 = v2:GetState()
+local v316 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v317 = Workspace.GetServerTimeNow(Workspace)
+local calc_318 = (v316 - v317)
+local _319 = 0 < calc_318
+local v320 = Workspace.GetServerTimeNow(Workspace)
+local v321 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v320)
+local v322 = game.Players.LocalPlayer.Character:GetDescendants()
+local _323 = 0 < v2.Health
+local v324 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v327 = v2:GetState()
+local v328 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v329 = Workspace.GetServerTimeNow(Workspace)
+local calc_330 = (v328 - v329)
+local _331 = 0 < calc_330
+local v332 = Workspace.GetServerTimeNow(Workspace)
+local v333 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v332)
+local v334 = game.Players.LocalPlayer.Character:GetDescendants()
+local _335 = 0 < v2.Health
+local v336 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v339 = v2:GetState()
+local v340 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v341 = Workspace.GetServerTimeNow(Workspace)
+local calc_342 = (v340 - v341)
+local _343 = 0 < calc_342
+local v344 = Workspace.GetServerTimeNow(Workspace)
+local v345 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v344)
+local v346 = game.Players.LocalPlayer.Character:GetDescendants()
+local _347 = 0 < v2.Health
+local v348 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v351 = v2:GetState()
+local v352 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v353 = Workspace.GetServerTimeNow(Workspace)
+local calc_354 = (v352 - v353)
+local _355 = 0 < calc_354
+local v356 = Workspace.GetServerTimeNow(Workspace)
+local v357 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v356)
+local v358 = game.Players.LocalPlayer.Character:GetDescendants()
+local _359 = 0 < v2.Health
+local v360 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v363 = v2:GetState()
+local v364 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v365 = Workspace.GetServerTimeNow(Workspace)
+local calc_366 = (v364 - v365)
+local _367 = 0 < calc_366
+local v368 = Workspace.GetServerTimeNow(Workspace)
+local v369 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v368)
+local v370 = game.Players.LocalPlayer.Character:GetDescendants()
+local _371 = 0 < v2.Health
+local v372 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v375 = v2:GetState()
+local v376 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v377 = Workspace.GetServerTimeNow(Workspace)
+local calc_378 = (v376 - v377)
+local _379 = 0 < calc_378
+local v380 = Workspace.GetServerTimeNow(Workspace)
+local v381 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v380)
+local v382 = game.Players.LocalPlayer.Character:GetDescendants()
+local _383 = 0 < v2.Health
+local v384 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v387 = v2:GetState()
+local v388 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v389 = Workspace.GetServerTimeNow(Workspace)
+local calc_390 = (v388 - v389)
+local _391 = 0 < calc_390
+local v392 = Workspace.GetServerTimeNow(Workspace)
+local v393 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v392)
+local v394 = game.Players.LocalPlayer.Character:GetDescendants()
+local _395 = 0 < v2.Health
+local v396 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v399 = v2:GetState()
+local v400 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v401 = Workspace.GetServerTimeNow(Workspace)
+local calc_402 = (v400 - v401)
+local _403 = 0 < calc_402
+local v404 = Workspace.GetServerTimeNow(Workspace)
+local v405 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v404)
+local v406 = game.Players.LocalPlayer.Character:GetDescendants()
+local _407 = 0 < v2.Health
+local v408 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v411 = v2:GetState()
+local v412 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v413 = Workspace.GetServerTimeNow(Workspace)
+local calc_414 = (v412 - v413)
+local _415 = 0 < calc_414
+local v416 = Workspace.GetServerTimeNow(Workspace)
+local v417 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v416)
+local v418 = game.Players.LocalPlayer.Character:GetDescendants()
+local _419 = 0 < v2.Health
+local v420 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v423 = v2:GetState()
+local v424 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v425 = Workspace.GetServerTimeNow(Workspace)
+local calc_426 = (v424 - v425)
+local _427 = 0 < calc_426
+local v428 = Workspace.GetServerTimeNow(Workspace)
+local v429 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v428)
+local v430 = game.Players.LocalPlayer.Character:GetDescendants()
+local _431 = 0 < v2.Health
+local v432 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v435 = v2:GetState()
+local v436 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v437 = Workspace.GetServerTimeNow(Workspace)
+local calc_438 = (v436 - v437)
+local _439 = 0 < calc_438
+local v440 = Workspace.GetServerTimeNow(Workspace)
+local v441 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v440)
+local v442 = game.Players.LocalPlayer.Character:GetDescendants()
+local _443 = 0 < v2.Health
+local v444 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v447 = v2:GetState()
+local v448 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v449 = Workspace.GetServerTimeNow(Workspace)
+local calc_450 = (v448 - v449)
+local _451 = 0 < calc_450
+local v452 = Workspace.GetServerTimeNow(Workspace)
+local v453 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v452)
+local v454 = game.Players.LocalPlayer.Character:GetDescendants()
+local _455 = 0 < v2.Health
+local v456 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v459 = v2:GetState()
+local v460 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v461 = Workspace.GetServerTimeNow(Workspace)
+local calc_462 = (v460 - v461)
+local _463 = 0 < calc_462
+local v464 = Workspace.GetServerTimeNow(Workspace)
+local v465 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v464)
+local v466 = game.Players.LocalPlayer.Character:GetDescendants()
+local _467 = 0 < v2.Health
+local v468 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v471 = v2:GetState()
+local v472 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v473 = Workspace.GetServerTimeNow(Workspace)
+local calc_474 = (v472 - v473)
+local _475 = 0 < calc_474
+local v476 = Workspace.GetServerTimeNow(Workspace)
+local v477 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v476)
+local v478 = game.Players.LocalPlayer.Character:GetDescendants()
+local _479 = 0 < v2.Health
+local v480 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v483 = v2:GetState()
+local v484 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v485 = Workspace.GetServerTimeNow(Workspace)
+local calc_486 = (v484 - v485)
+local _487 = 0 < calc_486
+local v488 = Workspace.GetServerTimeNow(Workspace)
+local v489 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v488)
+local v490 = game.Players.LocalPlayer.Character:GetDescendants()
+local _491 = 0 < v2.Health
+local v492 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v495 = v2:GetState()
+local v496 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v497 = Workspace.GetServerTimeNow(Workspace)
+local calc_498 = (v496 - v497)
+local _499 = 0 < calc_498
+local v500 = Workspace.GetServerTimeNow(Workspace)
+local v501 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v500)
+local v502 = game.Players.LocalPlayer.Character:GetDescendants()
+local _503 = 0 < v2.Health
+local v504 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v507 = v2:GetState()
+local v508 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v509 = Workspace.GetServerTimeNow(Workspace)
+local calc_510 = (v508 - v509)
+local _511 = 0 < calc_510
+local v512 = Workspace.GetServerTimeNow(Workspace)
+local v513 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v512)
+local v514 = game.Players.LocalPlayer.Character:GetDescendants()
+local _515 = 0 < v2.Health
+local v516 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v519 = v2:GetState()
+local v520 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v521 = Workspace.GetServerTimeNow(Workspace)
+local calc_522 = (v520 - v521)
+local _523 = 0 < calc_522
+local v524 = Workspace.GetServerTimeNow(Workspace)
+local v525 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v524)
+local v526 = game.Players.LocalPlayer.Character:GetDescendants()
+local _527 = 0 < v2.Health
+local v528 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v531 = v2:GetState()
+local v532 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v533 = Workspace.GetServerTimeNow(Workspace)
+local calc_534 = (v532 - v533)
+local _535 = 0 < calc_534
+local v536 = Workspace.GetServerTimeNow(Workspace)
+local v537 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v536)
+local v538 = game.Players.LocalPlayer.Character:GetDescendants()
+local _539 = 0 < v2.Health
+local v540 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v543 = v2:GetState()
+local v544 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v545 = Workspace.GetServerTimeNow(Workspace)
+local calc_546 = (v544 - v545)
+local _547 = 0 < calc_546
+local v548 = Workspace.GetServerTimeNow(Workspace)
+local v549 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v548)
+local v550 = game.Players.LocalPlayer.Character:GetDescendants()
+local _551 = 0 < v2.Health
+local v552 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v555 = v2:GetState()
+local v556 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v557 = Workspace.GetServerTimeNow(Workspace)
+local calc_558 = (v556 - v557)
+local _559 = 0 < calc_558
+local v560 = Workspace.GetServerTimeNow(Workspace)
+local v561 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v560)
+local v562 = game.Players.LocalPlayer.Character:GetDescendants()
+local _563 = 0 < v2.Health
+local v564 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v567 = v2:GetState()
+local v568 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v569 = Workspace.GetServerTimeNow(Workspace)
+local calc_570 = (v568 - v569)
+local _571 = 0 < calc_570
+local v572 = Workspace.GetServerTimeNow(Workspace)
+local v573 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v572)
+local v574 = game.Players.LocalPlayer.Character:GetDescendants()
+local _575 = 0 < v2.Health
+local v576 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v579 = v2:GetState()
+local v580 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v581 = Workspace.GetServerTimeNow(Workspace)
+local calc_582 = (v580 - v581)
+local _583 = 0 < calc_582
+local v584 = Workspace.GetServerTimeNow(Workspace)
+local v585 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v584)
+local v586 = game.Players.LocalPlayer.Character:GetDescendants()
+local _587 = 0 < v2.Health
+local v588 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v591 = v2:GetState()
+local v592 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v593 = Workspace.GetServerTimeNow(Workspace)
+local calc_594 = (v592 - v593)
+local _595 = 0 < calc_594
+local v596 = Workspace.GetServerTimeNow(Workspace)
+local v597 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v596)
+local v598 = game.Players.LocalPlayer.Character:GetDescendants()
+local _599 = 0 < v2.Health
+local v600 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v603 = v2:GetState()
+local v604 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v605 = Workspace.GetServerTimeNow(Workspace)
+local calc_606 = (v604 - v605)
+local _607 = 0 < calc_606
+local v608 = Workspace.GetServerTimeNow(Workspace)
+local v609 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v608)
+local v610 = game.Players.LocalPlayer.Character:GetDescendants()
+local _611 = 0 < v2.Health
+local v612 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v615 = v2:GetState()
+local v616 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v617 = Workspace.GetServerTimeNow(Workspace)
+local calc_618 = (v616 - v617)
+local _619 = 0 < calc_618
+local v620 = Workspace.GetServerTimeNow(Workspace)
+local v621 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v620)
+local v622 = game.Players.LocalPlayer.Character:GetDescendants()
+local _623 = 0 < v2.Health
+local v624 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v627 = v2:GetState()
+local v628 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v629 = Workspace.GetServerTimeNow(Workspace)
+local calc_630 = (v628 - v629)
+local _631 = 0 < calc_630
+local v632 = Workspace.GetServerTimeNow(Workspace)
+local v633 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v632)
+local v634 = game.Players.LocalPlayer.Character:GetDescendants()
+local _635 = 0 < v2.Health
+local v636 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v639 = v2:GetState()
+local v640 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v641 = Workspace.GetServerTimeNow(Workspace)
+local calc_642 = (v640 - v641)
+local _643 = 0 < calc_642
+local v644 = Workspace.GetServerTimeNow(Workspace)
+local v645 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v644)
+local v646 = game.Players.LocalPlayer.Character:GetDescendants()
+local _647 = 0 < v2.Health
+local v648 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v651 = v2:GetState()
+local v652 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v653 = Workspace.GetServerTimeNow(Workspace)
+local calc_654 = (v652 - v653)
+local _655 = 0 < calc_654
+local v656 = Workspace.GetServerTimeNow(Workspace)
+local v657 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v656)
+local v658 = game.Players.LocalPlayer.Character:GetDescendants()
+local _659 = 0 < v2.Health
+local v660 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v663 = v2:GetState()
+local v664 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v665 = Workspace.GetServerTimeNow(Workspace)
+local calc_666 = (v664 - v665)
+local _667 = 0 < calc_666
+local v668 = Workspace.GetServerTimeNow(Workspace)
+local v669 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v668)
+local v670 = game.Players.LocalPlayer.Character:GetDescendants()
+local _671 = 0 < v2.Health
+local v672 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v675 = v2:GetState()
+local v676 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v677 = Workspace.GetServerTimeNow(Workspace)
+local calc_678 = (v676 - v677)
+local _679 = 0 < calc_678
+local v680 = Workspace.GetServerTimeNow(Workspace)
+local v681 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v680)
+local v682 = game.Players.LocalPlayer.Character:GetDescendants()
+local _683 = 0 < v2.Health
+local v684 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v687 = v2:GetState()
+local v688 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v689 = Workspace.GetServerTimeNow(Workspace)
+local calc_690 = (v688 - v689)
+local _691 = 0 < calc_690
+local v692 = Workspace.GetServerTimeNow(Workspace)
+local v693 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v692)
+local v694 = game.Players.LocalPlayer.Character:GetDescendants()
+local _695 = 0 < v2.Health
+local v696 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v699 = v2:GetState()
+local v700 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v701 = Workspace.GetServerTimeNow(Workspace)
+local calc_702 = (v700 - v701)
+local _703 = 0 < calc_702
+local v704 = Workspace.GetServerTimeNow(Workspace)
+local v705 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v704)
+local v706 = game.Players.LocalPlayer.Character:GetDescendants()
+local _707 = 0 < v2.Health
+local v708 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v711 = v2:GetState()
+local v712 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v713 = Workspace.GetServerTimeNow(Workspace)
+local calc_714 = (v712 - v713)
+local _715 = 0 < calc_714
+local v716 = Workspace.GetServerTimeNow(Workspace)
+local v717 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v716)
+local v718 = game.Players.LocalPlayer.Character:GetDescendants()
+local _719 = 0 < v2.Health
+local v720 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v723 = v2:GetState()
+local v724 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v725 = Workspace.GetServerTimeNow(Workspace)
+local calc_726 = (v724 - v725)
+local _727 = 0 < calc_726
+local v728 = Workspace.GetServerTimeNow(Workspace)
+local v729 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v728)
+local v730 = game.Players.LocalPlayer.Character:GetDescendants()
+local _731 = 0 < v2.Health
+local v732 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v735 = v2:GetState()
+local v736 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v737 = Workspace.GetServerTimeNow(Workspace)
+local calc_738 = (v736 - v737)
+local _739 = 0 < calc_738
+local v740 = Workspace.GetServerTimeNow(Workspace)
+local v741 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v740)
+local v742 = game.Players.LocalPlayer.Character:GetDescendants()
+local _743 = 0 < v2.Health
+local v744 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v747 = v2:GetState()
+local v748 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v749 = Workspace.GetServerTimeNow(Workspace)
+local calc_750 = (v748 - v749)
+local _751 = 0 < calc_750
+local v752 = Workspace.GetServerTimeNow(Workspace)
+local v753 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v752)
+local v754 = game.Players.LocalPlayer.Character:GetDescendants()
+local _755 = 0 < v2.Health
+local v756 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v759 = v2:GetState()
+local v760 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v761 = Workspace.GetServerTimeNow(Workspace)
+local calc_762 = (v760 - v761)
+local _763 = 0 < calc_762
+local v764 = Workspace.GetServerTimeNow(Workspace)
+local v765 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v764)
+local v766 = game.Players.LocalPlayer.Character:GetDescendants()
+local _767 = 0 < v2.Health
+local v768 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v771 = v2:GetState()
+local v772 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v773 = Workspace.GetServerTimeNow(Workspace)
+local calc_774 = (v772 - v773)
+local _775 = 0 < calc_774
+local v776 = Workspace.GetServerTimeNow(Workspace)
+local v777 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v776)
+local v778 = game.Players.LocalPlayer.Character:GetDescendants()
+local _779 = 0 < v2.Health
+local v780 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v783 = v2:GetState()
+local v784 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v785 = Workspace.GetServerTimeNow(Workspace)
+local calc_786 = (v784 - v785)
+local _787 = 0 < calc_786
+local v788 = Workspace.GetServerTimeNow(Workspace)
+local v789 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v788)
+local v790 = game.Players.LocalPlayer.Character:GetDescendants()
+local _791 = 0 < v2.Health
+local v792 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+task.wait()
+local v795 = v2:GetState()
+local v796 = game.Players.LocalPlayer:GetAttribute("RagdollEndTime")
+local v797 = Workspace.GetServerTimeNow(Workspace)
+local calc_798 = (v796 - v797)
+local _799 = 0 < calc_798
+local v800 = Workspace.GetServerTimeNow(Workspace)
+local v801 = game.Players.LocalPlayer:SetAttribute("RagdollEndTime", v800)
+local v802 = game.Players.LocalPlayer.Character:GetDescendants()
+local _803 = 0 < v2.Health
+local v804 = v2:ChangeState(Enum.HumanoidStateType.Running)
+v3.Anchored = false
+end)
+end)
+local frame_270 = Instance.new("Frame")
+frame_270.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_270.BackgroundTransparency = 0.5
+frame_270.Size = UDim2.new(0.92, 0, 0, 50)
+frame_270.Parent = frame_270
+local uicorner_361 = Instance.new("UICorner")
+uicorner_361.CornerRadius = UDim.new(0, 8)
+uicorner_361.Parent = uicorner_361
+local uistroke_320 = Instance.new("UIStroke")
+uistroke_320.Thickness = 1
+uistroke_320.Color = Color3.fromRGB(35, 125, 255)
+uistroke_320.Transparency = 0.8
+uistroke_320.Parent = uistroke_320
+local textlabel_925 = Instance.new("TextLabel")
+textlabel_925.Text = "Helicopter"
+textlabel_925.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_925.TextColor3 = Color3.new(1, 1, 1)
+textlabel_925.TextXAlignment = "Left"
+textlabel_925.BackgroundTransparency = 1
+textlabel_925.Font = "GothamBold"
+textlabel_925.TextSize = 13
+textlabel_925.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_925.Parent = textlabel_925
+local frame_550 = Instance.new("Frame")
+frame_550.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_550.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_550.Size = UDim2.new(0, 42, 0, 20)
+frame_550.Parent = frame_550
+local uicorner_808 = Instance.new("UICorner")
+uicorner_808.CornerRadius = UDim.new(1, 0)
+uicorner_808.Parent = uicorner_808
+local frame_312 = Instance.new("Frame")
+frame_312.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_312.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_312.Size = UDim2.new(0, 16, 0, 16)
+frame_312.Parent = frame_312
+local uicorner_62 = Instance.new("UICorner")
+uicorner_62.CornerRadius = UDim.new(1, 0)
+uicorner_62.Parent = uicorner_62
+local textbutton_289 = Instance.new("TextButton")
+textbutton_289.BackgroundTransparency = 1
+textbutton_289.Text = ""
+textbutton_289.Size = UDim2.new(1, 0, 1, 0)
+textbutton_289.Parent = textbutton_289
+textbutton_289.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+local v5 = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+local bodyangularvelocity_340 = Instance.new("BodyAngularVelocity")
+bodyangularvelocity_340.Name = "HelicopterBAV"
+bodyangularvelocity_340.MaxTorque = Vector3.new(0, inf, 0)
+bodyangularvelocity_340.AngularVelocity = Vector3.new(0, 20, 0)
+bodyangularvelocity_340.Parent = bodyangularvelocity_340
+end)
+local screengui_613 = Instance.new("ScreenGui")
+screengui_613.Name = "Kawatan_FloatPanel"
+screengui_613.ResetOnSpawn = false
+screengui_613.Parent = screengui_613
+screengui_613.Enabled = false
+local frame_240 = Instance.new("Frame")
+frame_240.BackgroundColor3 = Color3.fromRGB(11, 14, 20)
+frame_240.Name = "FloatPanel"
+frame_240.Active = true
+frame_240.BorderSizePixel = 0
+frame_240.Position = UDim2.new(0.5, -115, 0.35, 0)
+frame_240.BackgroundTransparency = 0.1
+frame_240.Size = UDim2.new(0, 230, 0, 155)
+frame_240.Parent = frame_240
+local uicorner_598 = Instance.new("UICorner")
+uicorner_598.CornerRadius = UDim.new(0, 12)
+uicorner_598.Parent = uicorner_598
+local uistroke_436 = Instance.new("UIStroke")
+uistroke_436.Thickness = 2
+uistroke_436.Color = Color3.fromRGB(35, 125, 255)
+uistroke_436.Parent = uistroke_436
+local textbutton_124 = Instance.new("TextButton")
+textbutton_124.BackgroundColor3 = Color3.fromRGB(20, 28, 45)
+textbutton_124.Position = UDim2.new(1, -28, 0, 5)
+textbutton_124.BorderSizePixel = 0
+textbutton_124.TextColor3 = Color3.fromRGB(35, 125, 255)
+textbutton_124.ZIndex = 10
+textbutton_124.Text = "—"
+textbutton_124.Font = "GothamBold"
+textbutton_124.TextSize = 14
+textbutton_124.Size = UDim2.new(0, 24, 0, 24)
+textbutton_124.Parent = textbutton_124
+local uicorner_128 = Instance.new("UICorner")
+uicorner_128.CornerRadius = UDim.new(0, 6)
+uicorner_128.Parent = uicorner_128
+local uistroke_211 = Instance.new("UIStroke")
+uistroke_211.Thickness = 1
+uistroke_211.Color = Color3.fromRGB(35, 125, 255)
+uistroke_211.Transparency = 0.5
+uistroke_211.Parent = uistroke_211
+textbutton_124.MouseButton1Click:Connect(function(s, a, H)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2,
+Enum.EasingStyle.Quad), {
+Size = UDim2.new(0, frame_240.Size.X.Offset, 0, 34)
+})
+local v2 = v1:Play()
+textbutton_124.Text = "+"
+frame_240.ClipsDescendants = true
+end)
+local textlabel_390 = Instance.new("TextLabel")
+textlabel_390.Text = "Float"
+textlabel_390.Position = UDim2.new(0, 0, 0, 0)
+textlabel_390.TextColor3 = Color3.fromRGB(35, 125, 255)
+textlabel_390.TextXAlignment = "Center"
+textlabel_390.BackgroundTransparency = 1
+textlabel_390.Font = "GothamBold"
+textlabel_390.TextSize = 14
+textlabel_390.Size = UDim2.new(1, 0, 0, 32)
+textlabel_390.Parent = textlabel_390
+local frame_385 = Instance.new("Frame")
+frame_385.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+frame_385.BorderSizePixel = 0
+frame_385.Position = UDim2.new(0.075, 0, 0, 33)
+frame_385.BackgroundTransparency = 0.6
+frame_385.Size = UDim2.new(0.85, 0, 0, 1)
+frame_385.Parent = frame_385
+local textlabel_336 = Instance.new("TextLabel")
+textlabel_336.Text = "Status: OFF"
+textlabel_336.Position = UDim2.new(0, 0, 0, 38)
+textlabel_336.TextColor3 = Color3.fromRGB(140, 140, 140)
+textlabel_336.TextXAlignment = "Center"
+textlabel_336.BackgroundTransparency = 1
+textlabel_336.Font = "GothamBold"
+textlabel_336.TextSize = 11
+textlabel_336.Size = UDim2.new(1, 0, 0, 20)
+textlabel_336.Parent = textlabel_336
+local textbutton_705 = Instance.new("TextButton")
+textbutton_705.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+textbutton_705.Position = UDim2.new(0.09, 0, 0, 64)
+textbutton_705.BorderSizePixel = 0
+textbutton_705.TextColor3 = Color3.fromRGB(255, 255, 255)
+textbutton_705.Text = "FLOAT"
+textbutton_705.Font = "GothamBold"
+textbutton_705.TextSize = 17
+textbutton_705.Size = UDim2.new(0.82, 0, 0, 44)
+textbutton_705.Parent = textbutton_705
+local uicorner_550 = Instance.new("UICorner")
+uicorner_550.CornerRadius = UDim.new(0, 10)
+uicorner_550.Parent = uicorner_550
+local uigradient_802 = Instance.new("UIGradient")
+uigradient_802.Color = ColorSequence.new({
+ColorSequenceKeypoint.new(0, Color3.fromRGB(75, 160, 255)),
+ColorSequenceKeypoint.new(1, Color3.fromRGB(20, 100, 230))
+})
+uigradient_802.Rotation = 90
+uigradient_802.Parent = uigradient_802
+local uistroke_428 = Instance.new("UIStroke")
+uistroke_428.Thickness = 1.5
+uistroke_428.Color = Color3.fromRGB(120, 190, 255)
+uistroke_428.Transparency = 0.5
+uistroke_428.Parent = uistroke_428
+local textbutton_148 = Instance.new("TextButton")
+textbutton_148.BackgroundColor3 = Color3.fromRGB(40, 15, 15)
+textbutton_148.Position = UDim2.new(0.09, 0, 0, 117)
+textbutton_148.BorderSizePixel = 0
+textbutton_148.TextColor3 = Color3.fromRGB(230, 80, 80)
+textbutton_148.Text = "■ Stop"
+textbutton_148.Font = "GothamBold"
+textbutton_148.TextSize = 12
+textbutton_148.Size = UDim2.new(0.82, 0, 0, 26)
+textbutton_148.Parent = textbutton_148
+local uicorner_4 = Instance.new("UICorner")
+uicorner_4.CornerRadius = UDim.new(0, 6)
+uicorner_4.Parent = uicorner_4
+local uistroke_418 = Instance.new("UIStroke")
+uistroke_418.Thickness = 1
+uistroke_418.Color = Color3.fromRGB(200, 50, 50)
+uistroke_418.Transparency = 0.5
+uistroke_418.Parent = uistroke_418
+textbutton_705.MouseButton1Click:Connect(function(s, a)
+local v1 = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+local calc_2 = (v1.Position.Y + "10")
+tick()
+RunService.Heartbeat:Connect(function(arg1, arg2)
+local v1 = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+local v2 = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+tick()
+local calc_4 = (calc_2 - v1.Position.Y)
+local _5 = 0.3 < calc_4
+local calc_6 = (calc_4 * 8)
+end)
+local v5 = TweenService:Create(TweenService, {}, TweenInfo.new(0.15), {
+BackgroundColor3 = Color3.fromRGB(18, 80, 200)
+})
+local v6 = v5:Play()
+uigradient_802.Color = ColorSequence.new({
+ColorSequenceKeypoint.new(0, Color3.fromRGB(40, 110, 220)),
+ColorSequenceKeypoint.new(1, Color3.fromRGB(12, 65, 180))
+})
+textbutton_705.Text = "FLOATING"
+textlabel_336.Text = "Status: ACTIVE ↑"
+textlabel_336.TextColor3 = Color3.fromRGB(35, 125, 255)
+end)
+textbutton_148.MouseButton1Click:Connect(function(s, a, H)
+local v1 = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+v1.AssemblyLinearVelocity = function(arg1, arg2) end
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.15), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v4 = v3:Play()
+uigradient_802.Color = ColorSequence.new({
+ColorSequenceKeypoint.new(0, Color3.fromRGB(75, 160, 255)),
+ColorSequenceKeypoint.new(1, Color3.fromRGB(20, 100, 230))
+})
+textbutton_705.Text = "FLOAT"
+textlabel_336.Text = "Status: OFF"
+textlabel_336.TextColor3 = Color3.fromRGB(140, 140, 140)
+end)
+RunService.Heartbeat:Connect(function(s, a, H, b, q) end)
+frame_240.InputBegan:Connect(function(s, a, H, b) end)
+UserInputService.InputChanged:Connect(function(s, a, H, b, q, C)
+local calc_1 = (s.Position - s.Position)
+local calc_2 = (frame_240.Position.X.Offset + "calc_1.X")
+local calc_3 = (frame_240.Position.Y.Offset + "calc_1.Y")
+frame_240.Position = UDim2.new(frame_240.Position.X.Scale, calc_2,
+frame_240.Position.Y.Scale, calc_3)
+end)
+UserInputService.InputEnded:Connect(function(s, a, H) end)
+local frame_612 = Instance.new("Frame")
+frame_612.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_612.BackgroundTransparency = 0.5
+frame_612.Size = UDim2.new(0.92, 0, 0, 50)
+frame_612.Parent = frame_612
+local uicorner_602 = Instance.new("UICorner")
+uicorner_602.CornerRadius = UDim.new(0, 8)
+uicorner_602.Parent = uicorner_602
+local uistroke_628 = Instance.new("UIStroke")
+uistroke_628.Thickness = 1
+uistroke_628.Color = Color3.fromRGB(35, 125, 255)
+uistroke_628.Transparency = 0.8
+uistroke_628.Parent = uistroke_628
+local textlabel_752 = Instance.new("TextLabel")
+textlabel_752.Text = "Float Panel"
+textlabel_752.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_752.TextColor3 = Color3.new(1, 1, 1)
+textlabel_752.TextXAlignment = "Left"
+textlabel_752.BackgroundTransparency = 1
+textlabel_752.Font = "GothamBold"
+textlabel_752.TextSize = 13
+textlabel_752.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_752.Parent = textlabel_752
+local frame_871 = Instance.new("Frame")
+frame_871.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_871.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_871.Size = UDim2.new(0, 42, 0, 20)
+frame_871.Parent = frame_871
+local uicorner_989 = Instance.new("UICorner")
+uicorner_989.CornerRadius = UDim.new(1, 0)
+uicorner_989.Parent = uicorner_989
+local frame_73 = Instance.new("Frame")
+frame_73.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_73.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_73.Size = UDim2.new(0, 16, 0, 16)
+frame_73.Parent = frame_73
+local uicorner_796 = Instance.new("UICorner")
+uicorner_796.CornerRadius = UDim.new(1, 0)
+uicorner_796.Parent = uicorner_796
+local textbutton_540 = Instance.new("TextButton")
+textbutton_540.BackgroundTransparency = 1
+textbutton_540.Text = ""
+textbutton_540.Size = UDim2.new(1, 0, 1, 0)
+textbutton_540.Parent = textbutton_540
+textbutton_540.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+screengui_613.Enabled = true
+end)
+local frame_880 = Instance.new("Frame")
+frame_880.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_880.BackgroundTransparency = 0.5
+frame_880.Size = UDim2.new(0.92, 0, 0, 50)
+frame_880.Parent = frame_880
+local uicorner_108 = Instance.new("UICorner")
+uicorner_108.CornerRadius = UDim.new(0, 8)
+uicorner_108.Parent = uicorner_108
+local uistroke_601 = Instance.new("UIStroke")
+uistroke_601.Thickness = 1
+uistroke_601.Color = Color3.fromRGB(35, 125, 255)
+uistroke_601.Transparency = 0.8
+uistroke_601.Parent = uistroke_601
+local textlabel_169 = Instance.new("TextLabel")
+textlabel_169.Text = "Player ESP"
+textlabel_169.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_169.TextColor3 = Color3.new(1, 1, 1)
+textlabel_169.TextXAlignment = "Left"
+textlabel_169.BackgroundTransparency = 1
+textlabel_169.Font = "GothamBold"
+textlabel_169.TextSize = 13
+textlabel_169.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_169.Parent = textlabel_169
+local frame_448 = Instance.new("Frame")
+frame_448.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_448.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_448.Size = UDim2.new(0, 42, 0, 20)
+frame_448.Parent = frame_448
+local uicorner_215 = Instance.new("UICorner")
+uicorner_215.CornerRadius = UDim.new(1, 0)
+uicorner_215.Parent = uicorner_215
+local frame_409 = Instance.new("Frame")
+frame_409.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_409.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_409.Size = UDim2.new(0, 16, 0, 16)
+frame_409.Parent = frame_409
+local uicorner_46 = Instance.new("UICorner")
+uicorner_46.CornerRadius = UDim.new(1, 0)
+uicorner_46.Parent = uicorner_46
+local textbutton_651 = Instance.new("TextButton")
+textbutton_651.BackgroundTransparency = 1
+textbutton_651.Text = ""
+textbutton_651.Size = UDim2.new(1, 0, 1, 0)
+textbutton_651.Parent = textbutton_651
+textbutton_651.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+local v5 = Players:GetPlayers()
+Players.PlayerAdded:Connect(function(s) end)
+end)
+local frame_532 = Instance.new("Frame")
+frame_532.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_532.BackgroundTransparency = 0.5
+frame_532.Size = UDim2.new(0.92, 0, 0, 50)
+frame_532.Parent = frame_532
+local uicorner_174 = Instance.new("UICorner")
+uicorner_174.CornerRadius = UDim.new(0, 8)
+uicorner_174.Parent = uicorner_174
+local uistroke_862 = Instance.new("UIStroke")
+uistroke_862.Thickness = 1
+uistroke_862.Color = Color3.fromRGB(35, 125, 255)
+uistroke_862.Transparency = 0.8
+uistroke_862.Parent = uistroke_862
+local textlabel_922 = Instance.new("TextLabel")
+textlabel_922.Text = "Optimizer+XRay"
+textlabel_922.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_922.TextColor3 = Color3.new(1, 1, 1)
+textlabel_922.TextXAlignment = "Left"
+textlabel_922.BackgroundTransparency = 1
+textlabel_922.Font = "GothamBold"
+textlabel_922.TextSize = 13
+textlabel_922.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_922.Parent = textlabel_922
+local frame_559 = Instance.new("Frame")
+frame_559.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_559.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_559.Size = UDim2.new(0, 42, 0, 20)
+frame_559.Parent = frame_559
+local uicorner_199 = Instance.new("UICorner")
+uicorner_199.CornerRadius = UDim.new(1, 0)
+uicorner_199.Parent = uicorner_199
+local frame_628 = Instance.new("Frame")
+frame_628.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_628.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_628.Size = UDim2.new(0, 16, 0, 16)
+frame_628.Parent = frame_628
+local uicorner_109 = Instance.new("UICorner")
+uicorner_109.CornerRadius = UDim.new(1, 0)
+uicorner_109.Parent = uicorner_109
+local textbutton_2 = Instance.new("TextButton")
+textbutton_2.BackgroundTransparency = 1
+textbutton_2.Text = ""
+textbutton_2.Size = UDim2.new(1, 0, 1, 0)
+textbutton_2.Parent = textbutton_2
+textbutton_2.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+local v5 = settings()
+v5.Rendering.QualityLevel = Enum.QualityLevel.Level01
+Lighting.GlobalShadows = false
+Lighting.Brightness = 3
+Lighting.FogEnd = 9000000000
+local v10 = Workspace:GetDescendants()
+local v11 = Workspace:GetDescendants()
+end)
+local frame_56 = Instance.new("Frame")
+frame_56.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_56.BackgroundTransparency = 0.5
+frame_56.Size = UDim2.new(0.92, 0, 0, 50)
+frame_56.Parent = frame_56
+local uicorner_257 = Instance.new("UICorner")
+uicorner_257.CornerRadius = UDim.new(0, 8)
+uicorner_257.Parent = uicorner_257
+local uistroke_5 = Instance.new("UIStroke")
+uistroke_5.Thickness = 1
+uistroke_5.Color = Color3.fromRGB(35, 125, 255)
+uistroke_5.Transparency = 0.8
+uistroke_5.Parent = uistroke_5
+local textlabel_473 = Instance.new("TextLabel")
+textlabel_473.Text = "Unwalk"
+textlabel_473.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_473.TextColor3 = Color3.new(1, 1, 1)
+textlabel_473.TextXAlignment = "Left"
+textlabel_473.BackgroundTransparency = 1
+textlabel_473.Font = "GothamBold"
+textlabel_473.TextSize = 13
+textlabel_473.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_473.Parent = textlabel_473
+local frame_869 = Instance.new("Frame")
+frame_869.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_869.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_869.Size = UDim2.new(0, 42, 0, 20)
+frame_869.Parent = frame_869
+local uicorner_607 = Instance.new("UICorner")
+uicorner_607.CornerRadius = UDim.new(1, 0)
+uicorner_607.Parent = uicorner_607
+local frame_101 = Instance.new("Frame")
+frame_101.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_101.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_101.Size = UDim2.new(0, 16, 0, 16)
+frame_101.Parent = frame_101
+local uicorner_622 = Instance.new("UICorner")
+uicorner_622.CornerRadius = UDim.new(1, 0)
+uicorner_622.Parent = uicorner_622
+local textbutton_478 = Instance.new("TextButton")
+textbutton_478.BackgroundTransparency = 1
+textbutton_478.Text = ""
+textbutton_478.Size = UDim2.new(1, 0, 1, 0)
+textbutton_478.Parent = textbutton_478
+textbutton_478.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+local v5 = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+local v6 = v5.GetPlayingAnimationTracks(v5)
+local v7 = game.Players.LocalPlayer.Character:FindFirstChild("Animate")
+local v8 = v7:Clone()
+v7:Destroy()
+end)
+local frame_91 = Instance.new("Frame")
+frame_91.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_91.BackgroundTransparency = 0.5
+frame_91.Size = UDim2.new(0.92, 0, 0, 50)
+frame_91.Parent = frame_91
+local uicorner_694 = Instance.new("UICorner")
+uicorner_694.CornerRadius = UDim.new(0, 8)
+uicorner_694.Parent = uicorner_694
+local uistroke_275 = Instance.new("UIStroke")
+uistroke_275.Thickness = 1
+uistroke_275.Color = Color3.fromRGB(35, 125, 255)
+uistroke_275.Transparency = 0.8
+uistroke_275.Parent = uistroke_275
+local textlabel_630 = Instance.new("TextLabel")
+textlabel_630.Text = "Gravity"
+textlabel_630.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_630.TextColor3 = Color3.new(1, 1, 1)
+textlabel_630.TextXAlignment = "Left"
+textlabel_630.BackgroundTransparency = 1
+textlabel_630.Font = "GothamBold"
+textlabel_630.TextSize = 13
+textlabel_630.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_630.Parent = textlabel_630
+local frame_574 = Instance.new("Frame")
+frame_574.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_574.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_574.Size = UDim2.new(0, 42, 0, 20)
+frame_574.Parent = frame_574
+local uicorner_382 = Instance.new("UICorner")
+uicorner_382.CornerRadius = UDim.new(1, 0)
+uicorner_382.Parent = uicorner_382
+local frame_232 = Instance.new("Frame")
+frame_232.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_232.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_232.Size = UDim2.new(0, 16, 0, 16)
+frame_232.Parent = frame_232
+local uicorner_743 = Instance.new("UICorner")
+uicorner_743.CornerRadius = UDim.new(1, 0)
+uicorner_743.Parent = uicorner_743
+local textbutton_830 = Instance.new("TextButton")
+textbutton_830.BackgroundTransparency = 1
+textbutton_830.Text = ""
+textbutton_830.Size = UDim2.new(1, 0, 1, 0)
+textbutton_830.Parent = textbutton_830
+textbutton_830.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+local v5 = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+local attachment_446 = Instance.new("Attachment")
+attachment_446.Parent = attachment_446
+local vectorforce_153 = Instance.new("VectorForce")
+vectorforce_153.Attachment0 = {}
+vectorforce_153.ApplyAtCenterOfMass = true
+vectorforce_153.RelativeTo = Enum.ActuatorRelativeTo.World
+vectorforce_153.Force = function(arg1, arg2) end
+vectorforce_153.Parent = vectorforce_153
+local v14 = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+local calc_15 = (v2.JumpPower * 0.83666002653408)
+v14.JumpPower = calc_15
+end)
+local frame_876 = Instance.new("Frame")
+frame_876.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_876.BackgroundTransparency = 0.5
+frame_876.Size = UDim2.new(0.92, 0, 0, 50)
+frame_876.Parent = frame_876
+local uicorner_98 = Instance.new("UICorner")
+uicorner_98.CornerRadius = UDim.new(0, 8)
+uicorner_98.Parent = uicorner_98
+local uistroke_685 = Instance.new("UIStroke")
+uistroke_685.Thickness = 1
+uistroke_685.Color = Color3.fromRGB(35, 125, 255)
+uistroke_685.Transparency = 0.8
+uistroke_685.Parent = uistroke_685
+local textlabel_50 = Instance.new("TextLabel")
+textlabel_50.Text = "Speed Customizer"
+textlabel_50.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_50.TextColor3 = Color3.new(1, 1, 1)
+textlabel_50.TextXAlignment = "Left"
+textlabel_50.BackgroundTransparency = 1
+textlabel_50.Font = "GothamBold"
+textlabel_50.TextSize = 13
+textlabel_50.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_50.Parent = textlabel_50
+local frame_959 = Instance.new("Frame")
+frame_959.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_959.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_959.Size = UDim2.new(0, 42, 0, 20)
+frame_959.Parent = frame_959
+local uicorner_607 = Instance.new("UICorner")
+uicorner_607.CornerRadius = UDim.new(1, 0)
+uicorner_607.Parent = uicorner_607
+local frame_608 = Instance.new("Frame")
+frame_608.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_608.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_608.Size = UDim2.new(0, 16, 0, 16)
+frame_608.Parent = frame_608
+local uicorner_158 = Instance.new("UICorner")
+uicorner_158.CornerRadius = UDim.new(1, 0)
+uicorner_158.Parent = uicorner_158
+local textbutton_235 = Instance.new("TextButton")
+textbutton_235.BackgroundTransparency = 1
+textbutton_235.Text = ""
+textbutton_235.Size = UDim2.new(1, 0, 1, 0)
+textbutton_235.Parent = textbutton_235
+textbutton_235.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+local screengui_717 = Instance.new("ScreenGui")
+screengui_717.Name = "Kawatan_SpeedUI"
+screengui_717.ResetOnSpawn = false
+screengui_717.Parent = screengui_717
+local frame_159 = Instance.new("Frame")
+frame_159.BackgroundColor3 = Color3.fromRGB(20, 25, 30)
+frame_159.Name = "SpeedMainFrame"
+frame_159.Position = UDim2.new(0.5, -120, 0.4, 0)
+frame_159.BorderSizePixel = 0
+frame_159.Draggable = true
+frame_159.Active = true
+frame_159.BackgroundTransparency = 0.2
+frame_159.Size = UDim2.new(0, 240, 0, 220)
+frame_159.Parent = frame_159
+local uicorner_291 = Instance.new("UICorner")
+uicorner_291.CornerRadius = UDim.new(0, 10)
+uicorner_291.Parent = uicorner_291
+local uistroke_973 = Instance.new("UIStroke")
+uistroke_973.Thickness = 2
+uistroke_973.Color = Color3.fromRGB(50, 150, 250)
+uistroke_973.Parent = uistroke_973
+local textbutton_164 = Instance.new("TextButton")
+textbutton_164.BackgroundColor3 = Color3.fromRGB(20, 28, 45)
+textbutton_164.Position = UDim2.new(1, -28, 0, 5)
+textbutton_164.BorderSizePixel = 0
+textbutton_164.TextColor3 = Color3.fromRGB(35, 125, 255)
+textbutton_164.ZIndex = 10
+textbutton_164.Text = "—"
+textbutton_164.Font = "GothamBold"
+textbutton_164.TextSize = 14
+textbutton_164.Size = UDim2.new(0, 24, 0, 24)
+textbutton_164.Parent = textbutton_164
+local uicorner_763 = Instance.new("UICorner")
+uicorner_763.CornerRadius = UDim.new(0, 6)
+uicorner_763.Parent = uicorner_763
+local uistroke_843 = Instance.new("UIStroke")
+uistroke_843.Thickness = 1
+uistroke_843.Color = Color3.fromRGB(35, 125, 255)
+uistroke_843.Transparency = 0.5
+uistroke_843.Parent = uistroke_843
+textbutton_164.MouseButton1Click:Connect(function(s, a, H)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2,
+Enum.EasingStyle.Quad), {
+Size = UDim2.new(0, frame_159.Size.X.Offset, 0, 38)
+})
+local v2 = v1:Play()
+textbutton_164.Text = "+"
+frame_159.ClipsDescendants = true
+end)
+local textlabel_771 = Instance.new("TextLabel")
+textlabel_771.BackgroundTransparency = 1
+textlabel_771.Position = UDim2.new(0, 10, 0, 2)
+textlabel_771.ZIndex = 12
+textlabel_771.TextColor3 = Color3.fromRGB(80, 180, 255)
+textlabel_771.Text = "Speed Customizer"
+textlabel_771.TextXAlignment = Enum.TextXAlignment.Left
+textlabel_771.Font = Font.GothamBold
+textlabel_771.TextSize = 11
+textlabel_771.Size = UDim2.new(1, -40, 0, 16)
+textlabel_771.Parent = textlabel_771
+local textbutton_864 = Instance.new("TextButton")
+textbutton_864.BackgroundColor3 = Color3.fromRGB(0, 120, 215)
+textbutton_864.Position = UDim2.new(0, 10, 0, 14)
+textbutton_864.BorderSizePixel = 0
+textbutton_864.TextColor3 = Color3.fromRGB(255, 255, 255)
+textbutton_864.ZIndex = 12
+textbutton_864.Text = "ON"
+textbutton_864.Font = "GothamBold"
+textbutton_864.TextSize = 15
+textbutton_864.Size = UDim2.new(1, -20, 0, 22)
+textbutton_864.Parent = textbutton_864
+local uicorner_465 = Instance.new("UICorner")
+uicorner_465.CornerRadius = UDim.new(0, 7)
+uicorner_465.Parent = uicorner_465
+local uistroke_249 = Instance.new("UIStroke")
+uistroke_249.Thickness = 1.2
+uistroke_249.Color = Color3.fromRGB(100, 180, 255)
+uistroke_249.Transparency = 0.35
+uistroke_249.Parent = uistroke_249
+local frame_954 = Instance.new("Frame")
+frame_954.BackgroundColor3 = Color3.fromRGB(0, 120, 215)
+frame_954.Position = UDim2.new(0, 10, 0, 50)
+frame_954.BorderSizePixel = 0
+frame_954.Size = UDim2.new(1, -20, 0, 40)
+frame_954.Parent = frame_954
+local uicorner_160 = Instance.new("UICorner")
+uicorner_160.CornerRadius = UDim.new(0, 6)
+uicorner_160.Parent = uicorner_160
+local textbutton_523 = Instance.new("TextButton")
+textbutton_523.BackgroundTransparency = 1
+textbutton_523.TextColor3 = Color3.fromRGB(255, 255, 255)
+textbutton_523.Text = "ON"
+textbutton_523.Font = Font.GothamBold
+textbutton_523.TextSize = 18
+textbutton_523.Size = UDim2.new(1, 0, 1, 0)
+textbutton_523.Parent = textbutton_523
+local textlabel_584 = Instance.new("TextLabel")
+textlabel_584.BackgroundTransparency = 1
+textlabel_584.Position = UDim2.new(0, 12, 0, 100)
+textlabel_584.TextColor3 = Color3.fromRGB(200, 200, 200)
+textlabel_584.Text = "Speed"
+textlabel_584.TextXAlignment = Enum.TextXAlignment.Left
+textlabel_584.Font = Font.Gotham
+textlabel_584.TextSize = 14
+textlabel_584.Size = UDim2.new(0.6, 0, 0, 30)
+textlabel_584.Parent = textlabel_584
+local textbox_734 = Instance.new("TextBox")
+textbox_734.BackgroundColor3 = Color3.fromRGB(30, 35, 40)
+textbox_734.TextColor3 = Color3.fromRGB(255, 255, 255)
+textbox_734.ClearTextOnFocus = false
+textbox_734.Font = Font.GothamBold
+textbox_734.Position = UDim2.new(1, -90, 0, 100)
+textbox_734.Text = "58"
+textbox_734.Size = UDim2.new(0, 80, 0, 30)
+textbox_734.Parent = textbox_734
+local uicorner_905 = Instance.new("UICorner")
+uicorner_905.CornerRadius = UDim.new(0, 4)
+uicorner_905.Parent = uicorner_905
+local textlabel_816 = Instance.new("TextLabel")
+textlabel_816.BackgroundTransparency = 1
+textlabel_816.Position = UDim2.new(0, 12, 0, 140)
+textlabel_816.TextColor3 = Color3.fromRGB(200, 200, 200)
+textlabel_816.Text = "Steal Spd"
+textlabel_816.TextXAlignment = Enum.TextXAlignment.Left
+textlabel_816.Font = Font.Gotham
+textlabel_816.TextSize = 14
+textlabel_816.Size = UDim2.new(0.6, 0, 0, 30)
+textlabel_816.Parent = textlabel_816
+local textbox_477 = Instance.new("TextBox")
+textbox_477.BackgroundColor3 = Color3.fromRGB(30, 35, 40)
+textbox_477.TextColor3 = Color3.fromRGB(255, 255, 255)
+textbox_477.ClearTextOnFocus = false
+textbox_477.Font = Font.GothamBold
+textbox_477.Position = UDim2.new(1, -90, 0, 140)
+textbox_477.Text = "29"
+textbox_477.Size = UDim2.new(0, 80, 0, 30)
+textbox_477.Parent = textbox_477
+local uicorner_735 = Instance.new("UICorner")
+uicorner_735.CornerRadius = UDim.new(0, 4)
+uicorner_735.Parent = uicorner_735
+local textlabel_263 = Instance.new("TextLabel")
+textlabel_263.BackgroundTransparency = 1
+textlabel_263.Position = UDim2.new(0, 12, 0, 180)
+textlabel_263.TextColor3 = Color3.fromRGB(200, 200, 200)
+textlabel_263.Text = "Jump"
+textlabel_263.TextXAlignment = Enum.TextXAlignment.Left
+textlabel_263.Font = Font.Gotham
+textlabel_263.TextSize = 14
+textlabel_263.Size = UDim2.new(0.6, 0, 0, 30)
+textlabel_263.Parent = textlabel_263
+local textbox_630 = Instance.new("TextBox")
+textbox_630.BackgroundColor3 = Color3.fromRGB(30, 35, 40)
+textbox_630.TextColor3 = Color3.fromRGB(255, 255, 255)
+textbox_630.ClearTextOnFocus = false
+textbox_630.Font = Font.GothamBold
+textbox_630.Position = UDim2.new(1, -90, 0, 180)
+textbox_630.Text = "80"
+textbox_630.Size = UDim2.new(0, 80, 0, 30)
+textbox_630.Parent = textbox_630
+local uicorner_611 = Instance.new("UICorner")
+uicorner_611.CornerRadius = UDim.new(0, 4)
+uicorner_611.Parent = uicorner_611
+textbutton_523.MouseButton1Click:Connect(function(s)
+textbutton_523.Text = "ON"
+textbutton_864.Text = "ON"
+frame_954.BackgroundColor3 = Color3.fromRGB(0, 120, 215)
+textbutton_864.BackgroundColor3 = Color3.fromRGB(0, 120, 215)
+end)
+textbutton_864.MouseButton1Click:Connect(function(s, a, H)
+textbutton_523.Text = "OFF"
+textbutton_864.Text = "OFF"
+frame_954.BackgroundColor3 = Color3.fromRGB(150, 30, 30)
+textbutton_864.BackgroundColor3 = Color3.fromRGB(150, 30, 30)
+end)
+textbox_734.FocusLost:Connect(function(s, a)
+textbox_734.Text = "58"
+end)
+textbox_477.FocusLost:Connect(function(s, a)
+textbox_477.Text = "29"
+end)
+textbox_630.FocusLost:Connect(function(s, a)
+textbox_630.Text = "80"
+end)
+frame_159.InputBegan:Connect(function(s, a, H)
+s.Changed:Connect(function(s, a) end)
+end)
+UserInputService.InputChanged:Connect(function(s, a, H, b, q) end)
+textbutton_523.Text = "ON"
+local v167 = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+local v168 = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+game.Players.LocalPlayer.CharacterAdded:Connect(function(s)
+local v1 = s:WaitForChild("HumanoidRootPart")
+local v2 = s:WaitForChild("Humanoid")
+end)
+RunService.Heartbeat:Connect(function(s, a)
+local _1 = 0 < v2.MoveDirection.Magnitude
+local _2 = v2.WalkSpeed < 25
+local calc_3 = (v2.MoveDirection.X * 29)
+local calc_4 = (v2.MoveDirection.Z * 29)
+v1.AssemblyLinearVelocity = Vector3.new(calc_3, v1.AssemblyLinearVelocity.Y, calc_4)
+end)
+UserInputService.JumpRequest:Connect(function(s, a) end)
+end)
+local frame_360 = Instance.new("Frame")
+frame_360.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_360.BackgroundTransparency = 0.5
+frame_360.Size = UDim2.new(0.92, 0, 0, 50)
+frame_360.Parent = frame_360
+local uicorner_315 = Instance.new("UICorner")
+uicorner_315.CornerRadius = UDim.new(0, 8)
+uicorner_315.Parent = uicorner_315
+local uistroke_660 = Instance.new("UIStroke")
+uistroke_660.Thickness = 1
+uistroke_660.Color = Color3.fromRGB(35, 125, 255)
+uistroke_660.Transparency = 0.8
+uistroke_660.Parent = uistroke_660
+local textlabel_319 = Instance.new("TextLabel")
+textlabel_319.Text = "Vibrance"
+textlabel_319.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_319.TextColor3 = Color3.new(1, 1, 1)
+textlabel_319.TextXAlignment = "Left"
+textlabel_319.BackgroundTransparency = 1
+textlabel_319.Font = "GothamBold"
+textlabel_319.TextSize = 13
+textlabel_319.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_319.Parent = textlabel_319
+local frame_921 = Instance.new("Frame")
+frame_921.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_921.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_921.Size = UDim2.new(0, 42, 0, 20)
+frame_921.Parent = frame_921
+local uicorner_269 = Instance.new("UICorner")
+uicorner_269.CornerRadius = UDim.new(1, 0)
+uicorner_269.Parent = uicorner_269
+local frame_477 = Instance.new("Frame")
+frame_477.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_477.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_477.Size = UDim2.new(0, 16, 0, 16)
+frame_477.Parent = frame_477
+local uicorner_157 = Instance.new("UICorner")
+uicorner_157.CornerRadius = UDim.new(1, 0)
+uicorner_157.Parent = uicorner_157
+local textbutton_985 = Instance.new("TextButton")
+textbutton_985.BackgroundTransparency = 1
+textbutton_985.Text = ""
+textbutton_985.Size = UDim2.new(1, 0, 1, 0)
+textbutton_985.Parent = textbutton_985
+textbutton_985.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+local colorcorrectioneffect_636 = Instance.new("ColorCorrectionEffect")
+colorcorrectioneffect_636.Saturation = 2.5
+colorcorrectioneffect_636.Contrast = 0.4
+colorcorrectioneffect_636.Brightness = 0.06
+colorcorrectioneffect_636.TintColor = Color3.fromRGB(255, 255, 255)
+colorcorrectioneffect_636.Parent = colorcorrectioneffect_636
+local bloomeffect_447 = Instance.new("BloomEffect")
+bloomeffect_447.Intensity = 1.8
+bloomeffect_447.Size = 24
+bloomeffect_447.Threshold = 0.85
+bloomeffect_447.Parent = bloomeffect_447
+Lighting.ExposureCompensation = 0.4
+RunService.Heartbeat:Connect(function(s, a, H)
+tick()
+colorcorrectioneffect_636.Saturation = 2.5995670584346
+bloomeffect_447.Intensity = 1.8591533119804
+end)
+end)
+local screengui_959 = Instance.new("ScreenGui")
+screengui_959.Name = "Kawatan_HeliSpeedUI"
+screengui_959.ResetOnSpawn = false
+screengui_959.Parent = screengui_959
+screengui_959.Enabled = false
+local frame_800 = Instance.new("Frame")
+frame_800.BackgroundColor3 = Color3.fromRGB(11, 14, 20)
+frame_800.Name = "HeliSpeedPanel"
+frame_800.Active = true
+frame_800.BorderSizePixel = 0
+frame_800.Position = UDim2.new(0.5, 60, 0.4, 0)
+frame_800.BackgroundTransparency = 0.1
+frame_800.Size = UDim2.new(0, 230, 0, 115)
+frame_800.Parent = frame_800
+local uicorner_210 = Instance.new("UICorner")
+uicorner_210.CornerRadius = UDim.new(0, 12)
+uicorner_210.Parent = uicorner_210
+local uistroke_802 = Instance.new("UIStroke")
+uistroke_802.Thickness = 2
+uistroke_802.Color = Color3.fromRGB(35, 125, 255)
+uistroke_802.Parent = uistroke_802
+local textbutton_571 = Instance.new("TextButton")
+textbutton_571.BackgroundColor3 = Color3.fromRGB(20, 28, 45)
+textbutton_571.Position = UDim2.new(1, -28, 0, 5)
+textbutton_571.BorderSizePixel = 0
+textbutton_571.TextColor3 = Color3.fromRGB(35, 125, 255)
+textbutton_571.ZIndex = 10
+textbutton_571.Text = "—"
+textbutton_571.Font = "GothamBold"
+textbutton_571.TextSize = 14
+textbutton_571.Size = UDim2.new(0, 24, 0, 24)
+textbutton_571.Parent = textbutton_571
+local uicorner_75 = Instance.new("UICorner")
+uicorner_75.CornerRadius = UDim.new(0, 6)
+uicorner_75.Parent = uicorner_75
+local uistroke_268 = Instance.new("UIStroke")
+uistroke_268.Thickness = 1
+uistroke_268.Color = Color3.fromRGB(35, 125, 255)
+uistroke_268.Transparency = 0.5
+uistroke_268.Parent = uistroke_268
+textbutton_571.MouseButton1Click:Connect(function(s, a, H)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2,
+Enum.EasingStyle.Quad), {
+Size = UDim2.new(0, frame_800.Size.X.Offset, 0, 34)
+})
+local v2 = v1:Play()
+textbutton_571.Text = "+"
+frame_800.ClipsDescendants = true
+end)
+local textlabel_819 = Instance.new("TextLabel")
+textlabel_819.Text = "Helicopter Speed"
+textlabel_819.Position = UDim2.new(0, 0, 0, 0)
+textlabel_819.TextColor3 = Color3.fromRGB(35, 125, 255)
+textlabel_819.TextXAlignment = "Center"
+textlabel_819.BackgroundTransparency = 1
+textlabel_819.Font = "GothamBold"
+textlabel_819.TextSize = 14
+textlabel_819.Size = UDim2.new(1, 0, 0, 32)
+textlabel_819.Parent = textlabel_819
+local frame_29 = Instance.new("Frame")
+frame_29.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+frame_29.BorderSizePixel = 0
+frame_29.Position = UDim2.new(0.075, 0, 0, 33)
+frame_29.BackgroundTransparency = 0.6
+frame_29.Size = UDim2.new(0.85, 0, 0, 1)
+frame_29.Parent = frame_29
+local textlabel_428 = Instance.new("TextLabel")
+textlabel_428.Text = "Speed:"
+textlabel_428.Position = UDim2.new(0.05, 0, 0, 42)
+textlabel_428.TextColor3 = Color3.fromRGB(180, 180, 180)
+textlabel_428.TextXAlignment = "Left"
+textlabel_428.BackgroundTransparency = 1
+textlabel_428.Font = "GothamBold"
+textlabel_428.TextSize = 12
+textlabel_428.Size = UDim2.new(0.4, 0, 0, 30)
+textlabel_428.Parent = textlabel_428
+local textbox_343 = Instance.new("TextBox")
+textbox_343.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+textbox_343.ClearTextOnFocus = false
+textbox_343.Position = UDim2.new(0.5, -10, 0, 43)
+textbox_343.BorderSizePixel = 0
+textbox_343.TextColor3 = Color3.fromRGB(255, 255, 255)
+textbox_343.Text = "20"
+textbox_343.Font = "GothamBold"
+textbox_343.TextSize = 14
+textbox_343.Size = UDim2.new(0, 80, 0, 28)
+textbox_343.Parent = textbox_343
+local uicorner_613 = Instance.new("UICorner")
+uicorner_613.CornerRadius = UDim.new(0, 6)
+uicorner_613.Parent = uicorner_613
+local uistroke_162 = Instance.new("UIStroke")
+uistroke_162.Thickness = 1.5
+uistroke_162.Color = Color3.fromRGB(35, 125, 255)
+uistroke_162.Transparency = 0.5
+uistroke_162.Parent = uistroke_162
+local textbutton_249 = Instance.new("TextButton")
+textbutton_249.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+textbutton_249.Position = UDim2.new(0.05, 0, 0, 80)
+textbutton_249.BorderSizePixel = 0
+textbutton_249.TextColor3 = Color3.new(1, 1, 1)
+textbutton_249.Text = "Apply"
+textbutton_249.Font = "GothamBold"
+textbutton_249.TextSize = 13
+textbutton_249.Size = UDim2.new(0.9, 0, 0, 26)
+textbutton_249.Parent = textbutton_249
+local uicorner_429 = Instance.new("UICorner")
+uicorner_429.CornerRadius = UDim.new(0, 7)
+uicorner_429.Parent = uicorner_429
+textbutton_249.MouseButton1Click:Connect(function(s, a)
+textbox_343.Text = "20"
+end)
+textbox_343.FocusLost:Connect(function(s, a)
+textbox_343.Text = "20"
+end)
+frame_800.InputBegan:Connect(function(s) end)
+UserInputService.InputChanged:Connect(function(s, a, H, b)
+local calc_1 = (s.Position - s.Position)
+local calc_2 = (frame_800.Position.X.Offset + "calc_1.X")
+local calc_3 = (frame_800.Position.Y.Offset + "calc_1.Y")
+frame_800.Position = UDim2.new(frame_800.Position.X.Scale, calc_2,
+frame_800.Position.Y.Scale, calc_3)
+end)
+UserInputService.InputEnded:Connect(function(s) end)
+local frame_639 = Instance.new("Frame")
+frame_639.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_639.BackgroundTransparency = 0.5
+frame_639.Size = UDim2.new(0.92, 0, 0, 50)
+frame_639.Parent = frame_639
+local uicorner_983 = Instance.new("UICorner")
+uicorner_983.CornerRadius = UDim.new(0, 8)
+uicorner_983.Parent = uicorner_983
+local uistroke_691 = Instance.new("UIStroke")
+uistroke_691.Thickness = 1
+uistroke_691.Color = Color3.fromRGB(35, 125, 255)
+uistroke_691.Transparency = 0.8
+uistroke_691.Parent = uistroke_691
+local textlabel_269 = Instance.new("TextLabel")
+textlabel_269.Text = "Heli Speed Panel"
+textlabel_269.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_269.TextColor3 = Color3.new(1, 1, 1)
+textlabel_269.TextXAlignment = "Left"
+textlabel_269.BackgroundTransparency = 1
+textlabel_269.Font = "GothamBold"
+textlabel_269.TextSize = 13
+textlabel_269.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_269.Parent = textlabel_269
+local frame_595 = Instance.new("Frame")
+frame_595.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_595.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_595.Size = UDim2.new(0, 42, 0, 20)
+frame_595.Parent = frame_595
+local uicorner_51 = Instance.new("UICorner")
+uicorner_51.CornerRadius = UDim.new(1, 0)
+uicorner_51.Parent = uicorner_51
+local frame_583 = Instance.new("Frame")
+frame_583.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_583.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_583.Size = UDim2.new(0, 16, 0, 16)
+frame_583.Parent = frame_583
+local uicorner_256 = Instance.new("UICorner")
+uicorner_256.CornerRadius = UDim.new(1, 0)
+uicorner_256.Parent = uicorner_256
+local textbutton_370 = Instance.new("TextButton")
+textbutton_370.BackgroundTransparency = 1
+textbutton_370.Text = ""
+textbutton_370.Size = UDim2.new(1, 0, 1, 0)
+textbutton_370.Parent = textbutton_370
+textbutton_370.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+screengui_959.Enabled = true
+end)
+local screengui_505 = Instance.new("ScreenGui")
+screengui_505.Name = "Kawatan_GrabProgress"
+screengui_505.ResetOnSpawn = false
+screengui_505.Parent = screengui_505
+screengui_505.Enabled = false
+local frame_524 = Instance.new("Frame")
+frame_524.BackgroundColor3 = Color3.fromRGB(5, 8, 18)
+frame_524.Active = true
+frame_524.BorderSizePixel = 0
+frame_524.Position = UDim2.new(0.5, -150.0, 1, -90)
+frame_524.BackgroundTransparency = 0.08
+frame_524.Size = UDim2.new(0, 300, 0, 52)
+frame_524.Parent = frame_524
+local uicorner_847 = Instance.new("UICorner")
+uicorner_847.CornerRadius = UDim.new(0, 10)
+uicorner_847.Parent = uicorner_847
+local uistroke_661 = Instance.new("UIStroke")
+uistroke_661.Thickness = 2
+uistroke_661.Color = Color3.fromRGB(35, 125, 255)
+uistroke_661.Parent = uistroke_661
+local textbutton_510 = Instance.new("TextButton")
+textbutton_510.BackgroundColor3 = Color3.fromRGB(20, 28, 45)
+textbutton_510.Position = UDim2.new(1, -28, 0, 5)
+textbutton_510.BorderSizePixel = 0
+textbutton_510.TextColor3 = Color3.fromRGB(35, 125, 255)
+textbutton_510.ZIndex = 10
+textbutton_510.Text = "—"
+textbutton_510.Font = "GothamBold"
+textbutton_510.TextSize = 14
+textbutton_510.Size = UDim2.new(0, 24, 0, 24)
+textbutton_510.Parent = textbutton_510
+local uicorner_483 = Instance.new("UICorner")
+uicorner_483.CornerRadius = UDim.new(0, 6)
+uicorner_483.Parent = uicorner_483
+local uistroke_108 = Instance.new("UIStroke")
+uistroke_108.Thickness = 1
+uistroke_108.Color = Color3.fromRGB(35, 125, 255)
+uistroke_108.Transparency = 0.5
+uistroke_108.Parent = uistroke_108
+textbutton_510.MouseButton1Click:Connect(function(s, a, H)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2,
+Enum.EasingStyle.Quad), {
+Size = UDim2.new(0, frame_524.Size.X.Offset, 0, 34)
+})
+local v2 = v1:Play()
+textbutton_510.Text = "+"
+frame_524.ClipsDescendants = true
+end)
+local frame_469 = Instance.new("Frame")
+frame_469.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+frame_469.ZIndex = 0
+frame_469.BorderSizePixel = 0
+frame_469.Position = UDim2.new(0, -7, 0, -7)
+frame_469.BackgroundTransparency = 0.82
+frame_469.Size = UDim2.new(1, 14, 1, 14)
+frame_469.Parent = frame_469
+local uicorner_284 = Instance.new("UICorner")
+uicorner_284.CornerRadius = UDim.new(0, 14)
+uicorner_284.Parent = uicorner_284
+task.spawn(function(s, a, H, b)
+tick()
+frame_469.BackgroundTransparency = 0.87265145371531
+task.wait(0.03)
+tick()
+frame_469.BackgroundTransparency = 0.87263601629916
+task.wait(0.03)
+tick()
+frame_469.BackgroundTransparency = 0.87263431004767
+task.wait(0.03)
+tick()
+frame_469.BackgroundTransparency = 0.8726328191671
+task.wait(0.03)
+tick()
+frame_469.BackgroundTransparency = 0.87263084307771
+task.wait(0.03)
+tick()
+frame_469.BackgroundTransparency = 0.87262906437936
+task.wait(0.03)
+tick()
+frame_469.BackgroundTransparency = 0.87262753704941
+task.wait(0.03)
+tick()
+frame_469.BackgroundTransparency = 0.87262622522105
+task.wait(0.03)
+tick()
+frame_469.BackgroundTransparency = 0.87262498517052
+end)
+local textlabel_35 = Instance.new("TextLabel")
+textlabel_35.Text = "AUTO GRAB"
+textlabel_35.Position = UDim2.new(0, 8, 0, 2)
+textlabel_35.ZIndex = 4
+textlabel_35.TextColor3 = Color3.fromRGB(255, 255, 255)
+textlabel_35.TextXAlignment = "Left"
+textlabel_35.BackgroundTransparency = 1
+textlabel_35.Font = "GothamBold"
+textlabel_35.TextSize = 13
+textlabel_35.Size = UDim2.new(1, -10, 0, 22)
+textlabel_35.Parent = textlabel_35
+local textlabel_130 = Instance.new("TextLabel")
+textlabel_130.Text = "AUTO GRAB ™"
+textlabel_130.Position = UDim2.new(0.5, 0, 0, 2)
+textlabel_130.ZIndex = 4
+textlabel_130.TextColor3 = Color3.fromRGB(35, 125, 255)
+textlabel_130.TextXAlignment = "Right"
+textlabel_130.BackgroundTransparency = 1
+textlabel_130.Font = "GothamBold"
+textlabel_130.TextSize = 12
+textlabel_130.Size = UDim2.new(0.5, 0, 0, 22)
+textlabel_130.Parent = textlabel_130
+local frame_265 = Instance.new("Frame")
+frame_265.BackgroundColor3 = Color3.fromRGB(8, 12, 28)
+frame_265.ZIndex = 3
+frame_265.Position = UDim2.new(0, 8, 0, 28)
+frame_265.BorderSizePixel = 0
+frame_265.Size = UDim2.new(1, -16, 0, 18)
+frame_265.Parent = frame_265
+local uicorner_463 = Instance.new("UICorner")
+uicorner_463.CornerRadius = UDim.new(0, 6)
+uicorner_463.Parent = uicorner_463
+local uistroke_768 = Instance.new("UIStroke")
+uistroke_768.Thickness = 1
+uistroke_768.Color = Color3.fromRGB(35, 125, 255)
+uistroke_768.Transparency = 0.5
+uistroke_768.Parent = uistroke_768
+local frame_249 = Instance.new("Frame")
+frame_249.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+frame_249.ZIndex = 4
+frame_249.BorderSizePixel = 0
+frame_249.Size = UDim2.new(0, 0, 1, 0)
+frame_249.Parent = frame_249
+local uicorner_155 = Instance.new("UICorner")
+uicorner_155.CornerRadius = UDim.new(0, 6)
+uicorner_155.Parent = uicorner_155
+local uigradient_38 = Instance.new("UIGradient")
+uigradient_38.Color = ColorSequence.new({
+ColorSequenceKeypoint.new(0, Color3.fromRGB(120, 190, 255)),
+ColorSequenceKeypoint.new(0.5, Color3.fromRGB(35, 125, 255)),
+ColorSequenceKeypoint.new(1, Color3.fromRGB(18, 70, 200))
+})
+uigradient_38.Parent = uigradient_38
+local frame_843 = Instance.new("Frame")
+frame_843.BackgroundColor3 = Color3.fromRGB(200, 230, 255)
+frame_843.ZIndex = 5
+frame_843.BorderSizePixel = 0
+frame_843.Position = UDim2.new(0, 0, 0, 2)
+frame_843.BackgroundTransparency = 0.45
+frame_843.Size = UDim2.new(0, 0, 0, 4)
+frame_843.Parent = frame_843
+local uicorner_205 = Instance.new("UICorner")
+uicorner_205.CornerRadius = UDim.new(0, 3)
+uicorner_205.Parent = uicorner_205
+RunService.Heartbeat:Connect(function(s)
+frame_843.Size = UDim2.new(frame_249.Size.X.Scale, 0, 0, 4)
+end)
+frame_524.InputBegan:Connect(function(s, a, H) end)
+UserInputService.InputChanged:Connect(function(s, a, H, b)
+local calc_1 = (s.Position - s.Position)
+local calc_2 = (frame_524.Position.X.Offset + "calc_1.X")
+local calc_3 = (frame_524.Position.Y.Offset + "calc_1.Y")
+frame_524.Position = UDim2.new(frame_524.Position.X.Scale, calc_2,
+frame_524.Position.Y.Scale, calc_3)
+end)
+UserInputService.InputEnded:Connect(function(s, a, H) end)
+local screengui_620 = Instance.new("ScreenGui")
+screengui_620.Name = "Kawatan_GrabRadiusUI"
+screengui_620.ResetOnSpawn = false
+screengui_620.Parent = screengui_620
+screengui_620.Enabled = false
+local frame_99 = Instance.new("Frame")
+frame_99.BackgroundColor3 = Color3.fromRGB(11, 14, 20)
+frame_99.Name = "GrabRadiusPanel"
+frame_99.Active = true
+frame_99.BorderSizePixel = 0
+frame_99.Position = UDim2.new(0.5, -300, 0.4, 0)
+frame_99.BackgroundTransparency = 0.1
+frame_99.Size = UDim2.new(0, 240, 0, 130)
+frame_99.Parent = frame_99
+local uicorner_575 = Instance.new("UICorner")
+uicorner_575.CornerRadius = UDim.new(0, 12)
+uicorner_575.Parent = uicorner_575
+local uistroke_126 = Instance.new("UIStroke")
+uistroke_126.Thickness = 2
+uistroke_126.Color = Color3.fromRGB(35, 125, 255)
+uistroke_126.Parent = uistroke_126
+local textbutton_623 = Instance.new("TextButton")
+textbutton_623.BackgroundColor3 = Color3.fromRGB(20, 28, 45)
+textbutton_623.Position = UDim2.new(1, -28, 0, 5)
+textbutton_623.BorderSizePixel = 0
+textbutton_623.TextColor3 = Color3.fromRGB(35, 125, 255)
+textbutton_623.ZIndex = 10
+textbutton_623.Text = "—"
+textbutton_623.Font = "GothamBold"
+textbutton_623.TextSize = 14
+textbutton_623.Size = UDim2.new(0, 24, 0, 24)
+textbutton_623.Parent = textbutton_623
+local uicorner_423 = Instance.new("UICorner")
+uicorner_423.CornerRadius = UDim.new(0, 6)
+uicorner_423.Parent = uicorner_423
+local uistroke_786 = Instance.new("UIStroke")
+uistroke_786.Thickness = 1
+uistroke_786.Color = Color3.fromRGB(35, 125, 255)
+uistroke_786.Transparency = 0.5
+uistroke_786.Parent = uistroke_786
+textbutton_623.MouseButton1Click:Connect(function(s, a, H)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2,
+Enum.EasingStyle.Quad), {
+Size = UDim2.new(0, frame_99.Size.X.Offset, 0, 34)
+})
+local v2 = v1:Play()
+textbutton_623.Text = "+"
+frame_99.ClipsDescendants = true
+end)
+local textlabel_133 = Instance.new("TextLabel")
+textlabel_133.Text = "Grab Radius"
+textlabel_133.Position = UDim2.new(0, 0, 0, 0)
+textlabel_133.TextColor3 = Color3.fromRGB(35, 125, 255)
+textlabel_133.TextXAlignment = "Center"
+textlabel_133.BackgroundTransparency = 1
+textlabel_133.Font = "GothamBold"
+textlabel_133.TextSize = 14
+textlabel_133.Size = UDim2.new(1, 0, 0, 32)
+textlabel_133.Parent = textlabel_133
+local frame_905 = Instance.new("Frame")
+frame_905.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+frame_905.BorderSizePixel = 0
+frame_905.Position = UDim2.new(0.075, 0, 0, 33)
+frame_905.BackgroundTransparency = 0.6
+frame_905.Size = UDim2.new(0.85, 0, 0, 1)
+frame_905.Parent = frame_905
+local textlabel_894 = Instance.new("TextLabel")
+textlabel_894.Text = "Radius: 20"
+textlabel_894.Position = UDim2.new(0, 0, 0, 38)
+textlabel_894.TextColor3 = Color3.fromRGB(35, 125, 255)
+textlabel_894.TextXAlignment = "Center"
+textlabel_894.BackgroundTransparency = 1
+textlabel_894.Font = "GothamBold"
+textlabel_894.TextSize = 13
+textlabel_894.Size = UDim2.new(1, 0, 0, 20)
+textlabel_894.Parent = textlabel_894
+local frame_601 = Instance.new("Frame")
+frame_601.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_601.Position = UDim2.new(0.07, 0, 0, 65)
+frame_601.BorderSizePixel = 0
+frame_601.Size = UDim2.new(0.86, 0, 0, 10)
+frame_601.Parent = frame_601
+local uicorner_190 = Instance.new("UICorner")
+uicorner_190.CornerRadius = UDim.new(1, 0)
+uicorner_190.Parent = uicorner_190
+local uistroke_213 = Instance.new("UIStroke")
+uistroke_213.Thickness = 1
+uistroke_213.Color = Color3.fromRGB(35, 125, 255)
+uistroke_213.Transparency = 0.6
+uistroke_213.Parent = uistroke_213
+local frame_873 = Instance.new("Frame")
+frame_873.BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+frame_873.BorderSizePixel = 0
+frame_873.Size = UDim2.new(0.1304347826087, 0, 1, 0)
+frame_873.Parent = frame_873
+local uicorner_44 = Instance.new("UICorner")
+uicorner_44.CornerRadius = UDim.new(1, 0)
+uicorner_44.Parent = uicorner_44
+local frame_605 = Instance.new("Frame")
+frame_605.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_605.Position = UDim2.new(0.1304347826087, -9, 0.5, -9)
+frame_605.BorderSizePixel = 0
+frame_605.Size = UDim2.new(0, 18, 0, 18)
+frame_605.Parent = frame_605
+local uicorner_413 = Instance.new("UICorner")
+uicorner_413.CornerRadius = UDim.new(1, 0)
+uicorner_413.Parent = uicorner_413
+local uistroke_717 = Instance.new("UIStroke")
+uistroke_717.Thickness = 1.5
+uistroke_717.Color = Color3.fromRGB(35, 125, 255)
+uistroke_717.Parent = uistroke_717
+local textbutton_27 = Instance.new("TextButton")
+textbutton_27.BackgroundTransparency = 1
+textbutton_27.ZIndex = 6
+textbutton_27.Position = UDim2.new(0, 0, -1.5, 0)
+textbutton_27.Text = ""
+textbutton_27.Size = UDim2.new(1, 0, 4, 0)
+textbutton_27.Parent = textbutton_27
+local textlabel_381 = Instance.new("TextLabel")
+textlabel_381.Text = "5"
+textlabel_381.Position = UDim2.new(0.07, -10, 0, 79)
+textlabel_381.TextColor3 = Color3.fromRGB(140, 140, 140)
+textlabel_381.TextXAlignment = "Center"
+textlabel_381.BackgroundTransparency = 1
+textlabel_381.Font = "GothamBold"
+textlabel_381.TextSize = 10
+textlabel_381.Size = UDim2.new(0, 20, 0, 14)
+textlabel_381.Parent = textlabel_381
+local textlabel_734 = Instance.new("TextLabel")
+textlabel_734.Text = "120"
+textlabel_734.Position = UDim2.new(0.93, -12, 0, 79)
+textlabel_734.TextColor3 = Color3.fromRGB(140, 140, 140)
+textlabel_734.TextXAlignment = "Center"
+textlabel_734.BackgroundTransparency = 1
+textlabel_734.Font = "GothamBold"
+textlabel_734.TextSize = 10
+textlabel_734.Size = UDim2.new(0, 24, 0, 14)
+textlabel_734.Parent = textlabel_734
+local textbox_61 = Instance.new("TextBox")
+textbox_61.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+textbox_61.ClearTextOnFocus = false
+textbox_61.Position = UDim2.new(0.5, -26, 0, 97)
+textbox_61.BorderSizePixel = 0
+textbox_61.TextColor3 = Color3.new(1, 1, 1)
+textbox_61.Text = "20"
+textbox_61.Font = "GothamBold"
+textbox_61.TextSize = 13
+textbox_61.Size = UDim2.new(0, 52, 0, 26)
+textbox_61.Parent = textbox_61
+local uicorner_510 = Instance.new("UICorner")
+uicorner_510.CornerRadius = UDim.new(0, 6)
+uicorner_510.Parent = uicorner_510
+local uistroke_999 = Instance.new("UIStroke")
+uistroke_999.Thickness = 1.5
+uistroke_999.Color = Color3.fromRGB(35, 125, 255)
+uistroke_999.Transparency = 0.4
+uistroke_999.Parent = uistroke_999
+textbutton_27.MouseButton1Down:Connect(function(arg1, arg2) end)
+UserInputService.InputEnded:Connect(function(s, a, H) end)
+UserInputService.InputChanged:Connect(function(s, a, H) end)
+textbox_61.FocusLost:Connect(function(s, a)
+textbox_61.Text = "20"
+end)
+frame_99.InputBegan:Connect(function(s, a, H, b, q) end)
+UserInputService.InputChanged:Connect(function(s, a, H, b, q)
+local calc_1 = (s.Position - s.Position)
+local calc_2 = (frame_99.Position.X.Offset + "calc_1.X")
+local calc_3 = (frame_99.Position.Y.Offset + "calc_1.Y")
+frame_99.Position = UDim2.new(frame_99.Position.X.Scale, calc_2,
+frame_99.Position.Y.Scale, calc_3)
+end)
+UserInputService.InputEnded:Connect(function(s) end)
+local frame_523 = Instance.new("Frame")
+frame_523.BackgroundColor3 = Color3.fromRGB(18, 24, 35)
+frame_523.BackgroundTransparency = 0.5
+frame_523.Size = UDim2.new(0.92, 0, 0, 50)
+frame_523.Parent = frame_523
+local uicorner_279 = Instance.new("UICorner")
+uicorner_279.CornerRadius = UDim.new(0, 8)
+uicorner_279.Parent = uicorner_279
+local uistroke_249 = Instance.new("UIStroke")
+uistroke_249.Thickness = 1
+uistroke_249.Color = Color3.fromRGB(35, 125, 255)
+uistroke_249.Transparency = 0.8
+uistroke_249.Parent = uistroke_249
+local textlabel_677 = Instance.new("TextLabel")
+textlabel_677.Text = "Grab Radius Panel"
+textlabel_677.Position = UDim2.new(0.05, 0, 0, 0)
+textlabel_677.TextColor3 = Color3.new(1, 1, 1)
+textlabel_677.TextXAlignment = "Left"
+textlabel_677.BackgroundTransparency = 1
+textlabel_677.Font = "GothamBold"
+textlabel_677.TextSize = 13
+textlabel_677.Size = UDim2.new(0.6, 0, 1, 0)
+textlabel_677.Parent = textlabel_677
+local frame_317 = Instance.new("Frame")
+frame_317.BackgroundColor3 = Color3.fromRGB(40, 45, 55)
+frame_317.Position = UDim2.new(0.95, -42, 0.5, -10)
+frame_317.Size = UDim2.new(0, 42, 0, 20)
+frame_317.Parent = frame_317
+local uicorner_92 = Instance.new("UICorner")
+uicorner_92.CornerRadius = UDim.new(1, 0)
+uicorner_92.Parent = uicorner_92
+local frame_882 = Instance.new("Frame")
+frame_882.BackgroundColor3 = Color3.new(1, 1, 1)
+frame_882.Position = UDim2.new(0.1, 0, 0.1, 0)
+frame_882.Size = UDim2.new(0, 16, 0, 16)
+frame_882.Parent = frame_882
+local uicorner_936 = Instance.new("UICorner")
+uicorner_936.CornerRadius = UDim.new(1, 0)
+uicorner_936.Parent = uicorner_936
+local textbutton_191 = Instance.new("TextButton")
+textbutton_191.BackgroundTransparency = 1
+textbutton_191.Text = ""
+textbutton_191.Size = UDim2.new(1, 0, 1, 0)
+textbutton_191.Parent = textbutton_191
+textbutton_191.MouseButton1Click:Connect(function(s)
+local v1 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+BackgroundColor3 = Color3.fromRGB(35, 125, 255)
+})
+local v2 = v1:Play()
+local v3 = TweenService:Create(TweenService, {}, TweenInfo.new(0.2), {
+Position = UDim2.new(0.55, 0, 0.1, 0)
+})
+local v4 = v3:Play()
+screengui_620.Enabled = true
+end)
+frame_623.InputBegan:Connect(function(s, a, H, b, q) end)
+UserInputService.InputChanged:Connect(function(s, a, H, b, q)
+local calc_1 = (s.Position - s.Position)
+local calc_2 = (frame_623.Position.X.Offset + "calc_1.X")
+local calc_3 = (frame_623.Position.Y.Offset + "calc_1.Y")
+frame_623.Position = UDim2.new(frame_623.Position.X.Scale, calc_2,
+frame_623.Position.Y.Scale, calc_3)
+end)
+frame_623.InputEnded:Connect(function(s) end)
+textbutton_524.InputBegan:Connect(function(s, a, H, b, q) end)
+UserInputService.InputChanged:Connect(function(s, a, H, b, q)
+local calc_1 = (s.Position - s.Position)
+local calc_2 = (textbutton_524.Position.X.Offset + "calc_1.X")
+local calc_3 = (textbutton_524.Position.Y.Offset + "calc_1.Y")
+textbutton_524.Position = UDim2.new(textbutton_524.Position.X.Scale, calc_2,
+textbutton_524.Position.Y.Scale, calc_3)
+end)
+textbutton_524.InputEnded:Connect(function(s) end)
+textbutton_524.MouseButton1Click:Connect(function(s)
+frame_623.Visible = false
+end)
